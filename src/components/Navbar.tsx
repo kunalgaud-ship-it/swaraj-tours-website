@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, Clock, Menu, X, Car, Shield, ChevronRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { pageForSection } from '../pages';
+import { pageForSection, withBase } from '../pages';
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
@@ -90,12 +90,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <a
-          href="/"
+          href={withBase('/')}
           onClick={(event) => handleNavLinkClick(event, 'hero')}
           className="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0"
         >
           <img
-            src="/assets/logo-swaraj.svg"
+            src={withBase('/assets/logo-swaraj.svg')}
             alt="Swaraj Tours and Travels"
             className="h-12 sm:h-14 xl:h-12 2xl:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
           />
@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
           {desktopLinks.map((link) => (
             <a
               key={link.target}
-              href={pageForSection(link.target).path}
+              href={withBase(pageForSection(link.target).path)}
               onClick={(event) => handleNavLinkClick(event, link.target)}
               className="px-2 2xl:px-3 py-2 rounded-lg whitespace-nowrap hover:text-amber-600 hover:bg-amber-50/70 transition-all"
             >
@@ -196,7 +196,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
             {navLinks.map((link) => (
               <a
                 key={link.target}
-                href={pageForSection(link.target).path}
+                href={withBase(pageForSection(link.target).path)}
                 onClick={(event) => handleNavLinkClick(event, link.target)}
                 className="flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-left text-sm font-semibold text-slate-800 hover:bg-amber-50 hover:text-amber-600 transition-colors"
               >

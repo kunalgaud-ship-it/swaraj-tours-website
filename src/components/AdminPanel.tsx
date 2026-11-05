@@ -249,7 +249,7 @@ export function AdminPanel() {
       <main className="grid min-h-screen place-items-center bg-slate-950 px-4 py-10 text-slate-900">
         <div className="w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
           <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-7 py-8 text-white sm:px-9">
-            <a href="/" className="mb-8 inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white"><ArrowLeft className="h-4 w-4" /> Back to website</a>
+            <a href={import.meta.env.BASE_URL} className="mb-8 inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white"><ArrowLeft className="h-4 w-4" /> Back to website</a>
             <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-amber-500 text-slate-950"><ShieldCheck className="h-6 w-6" /></div>
             <h1 className="text-2xl font-black">Swaraj Admin</h1>
             <p className="mt-1 text-sm text-slate-300">Sign in to manage bookings, fares and website content.</p>
@@ -323,12 +323,12 @@ export function AdminPanel() {
     <div className="min-h-screen bg-slate-100 text-slate-900">
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <a href="/" className="flex min-w-0 items-center gap-3">
+          <a href={import.meta.env.BASE_URL} className="flex min-w-0 items-center gap-3">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-slate-950 text-amber-400"><CarFront className="h-5 w-5" /></span>
             <span className="min-w-0"><strong className="block truncate text-sm font-black sm:text-base">Swaraj Admin</strong><span className="hidden text-[11px] font-medium text-slate-500 sm:block">Bookings, fares and website content</span></span>
           </a>
           <div className="flex items-center gap-2">
-            <a href="/" className="hidden items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 sm:flex"><ArrowLeft className="h-3.5 w-3.5" /> Website</a>
+            <a href={import.meta.env.BASE_URL} className="hidden items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 sm:flex"><ArrowLeft className="h-3.5 w-3.5" /> Website</a>
             <button onClick={logout} className="inline-flex items-center gap-1.5 rounded-lg bg-slate-950 px-3 py-2 text-xs font-bold text-white hover:bg-slate-800"><LogOut className="h-3.5 w-3.5" /><span className="hidden sm:inline">Sign out</span></button>
           </div>
         </div>

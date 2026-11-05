@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
+import { stripBase } from './pages';
 import './index.css';
 
 const AdminPanel = lazy(() => import('./components/AdminPanel').then((module) => ({ default: module.AdminPanel })));
@@ -18,7 +19,7 @@ console.error = (...args: unknown[]) => {
   }
 };
 
-const isAdminRoute = window.location.pathname.replace(/\/+$/, '') === '/admin';
+const isAdminRoute = stripBase(window.location.pathname) === '/admin';
 createRoot(document.getElementById('root')!).render(
   isAdminRoute ? <Suspense fallback={<div className="min-h-screen bg-slate-950" />}><AdminPanel /></Suspense> : <App />,
 );

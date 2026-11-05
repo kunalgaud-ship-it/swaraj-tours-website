@@ -3,7 +3,11 @@ import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
+  // BASE_PATH lets the same build run from a sub-folder, e.g. "/swaraj-tours-website/" on GitHub Pages.
+  // Leave it unset for Vercel or a custom domain (served from "/").
+  const base = (process.env.BASE_PATH || '/').replace(/\/*$/, '/');
   return {
+    base,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

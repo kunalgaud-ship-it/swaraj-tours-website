@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Home, Car, PhoneCall } from 'lucide-react';
 import { COMPANY_INFO } from '../data/travelData';
+import { withBase } from '../pages';
 
 interface NotFoundPageProps {
   onHome: () => void;
@@ -30,7 +31,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onHome, onBook }) =>
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href="/"
+            href={withBase('/')}
             onClick={(event) => { event.preventDefault(); onHome(); }}
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-colors"
           >

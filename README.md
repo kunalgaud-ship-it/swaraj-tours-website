@@ -24,6 +24,12 @@ Copy `.env.example` to `.env` for local work. On Vercel, add the same keys under
 | `RESEND_API_KEY`, `BOOKING_FROM_EMAIL`, `BOOKING_NOTIFICATION_EMAIL` | Booking and inquiry emails. `BOOKING_FROM_EMAIL` must use a domain verified in Resend. Until these are set, forms fall back to WhatsApp. |
 | `SUPABASE_*`, `VITE_SUPABASE_*` | Admin panel at `/admin` and the booking inbox. See `ADMIN_SETUP.md`. |
 
+## Preview on GitHub Pages
+
+`.github/workflows/deploy-pages.yml` builds and publishes `dist/` to https://kunalgaud-ship-it.github.io/swaraj-tours-website/ on every push to `main` (repo must be public, Settings → Pages → Source: GitHub Actions). Add `VITE_GOOGLE_MAPS_API_KEY` under Settings → Secrets → Actions so the map and city autocomplete work. The `api/` functions do not run there, so the booking and inquiry forms hand off to WhatsApp. Use Vercel for the real launch.
+
+The build serves from a sub-folder via `BASE_PATH`; leave it unset on Vercel or a custom domain.
+
 ## Pages
 
 Routes and their titles / descriptions live in `src/pageMeta.js`; the build prerenders one `index.html` per route so each page has its own meta tags. `/policies` is the crawlable copy of the Terms, Privacy and Refund text shown in the footer modal.

@@ -10,7 +10,8 @@ const dist = path.join(root, 'dist');
 const sourceHtml = await readFile(path.join(dist, 'index.html'), 'utf8');
 const configuredSiteUrl = process.env.SITE_URL?.trim();
 const isPlaceholderUrl = configuredSiteUrl && /your-domain\.com|example\.com/i.test(configuredSiteUrl);
-const siteUrl = configuredSiteUrl && !isPlaceholderUrl ? new URL(configuredSiteUrl).origin : '';
+// Keep any sub-folder (GitHub Pages: https://user.github.io/repo), drop the trailing slash.
+const siteUrl = configuredSiteUrl && !isPlaceholderUrl ? new URL(configuredSiteUrl).href.replace(/\/+$/, '') : '';
 
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
   '&': '&amp;',
@@ -64,6 +65,12 @@ for (const page of PAGE_META) {
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, html, 'utf8');
 }
+
+// Static hosts (GitHub Pages) serve 404.html for unknown URLs; the app then renders its own 404 view.
+const notFoundHtml = sourceHtml
+  .replace(/<title>[^<]*<\/title>/, '<title>Page Not Found | Swaraj Tours</title>')
+  .replace('</head>', `    <meta name="robots" content="noindex" />${newline}  </head>`);
+await writeFile(path.join(dist, '404.html'), notFoundHtml, 'utf8');
 
 const robots = [
   'User-agent: *',

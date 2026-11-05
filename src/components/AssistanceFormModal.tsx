@@ -249,7 +249,7 @@ export const AssistanceFormModal: React.FC<AssistanceFormModalProps> = ({ isOpen
                 {/* Brand Logo on Right */}
                 <div className="shrink-0 flex items-center">
                   <img
-                    src="/assets/logo-swaraj.svg"
+                    src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/logo-swaraj.svg`}
                     alt="Swaraj Tours and Travels"
                     className="h-12 sm:h-14 w-auto object-contain"
                     onError={(e) => {

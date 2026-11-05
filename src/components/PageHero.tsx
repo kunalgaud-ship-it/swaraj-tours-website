@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight, Home } from 'lucide-react';
+import { withBase } from '../pages';
 
 interface PageHeroProps {
   title: string;
@@ -12,7 +13,7 @@ export const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, onHome }) =
   <section className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white py-12 sm:py-16 px-4">
     <div className="max-w-7xl mx-auto">
       <nav className="flex items-center gap-1.5 text-xs text-slate-300 mb-4" aria-label="Breadcrumb">
-        <a href="/" onClick={(event) => { event.preventDefault(); onHome(); }} className="flex items-center gap-1 hover:text-amber-400 transition-colors">
+        <a href={withBase('/')} onClick={(event) => { event.preventDefault(); onHome(); }} className="flex items-center gap-1 hover:text-amber-400 transition-colors">
           <Home className="w-3.5 h-3.5" /> Home
         </a>
         <ChevronRight className="w-3.5 h-3.5 text-slate-500" />

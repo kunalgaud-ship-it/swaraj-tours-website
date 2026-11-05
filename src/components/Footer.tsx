@@ -19,7 +19,7 @@ import {
 import { COMPANY_INFO, POPULAR_ROUTES, VEHICLES, TOUR_PACKAGES, SERVICES } from '../data/travelData';
 import type { LegalDocType } from './LegalModal';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { pageForSection } from '../pages';
+import { pageForSection, withBase } from '../pages';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
             <div className="flex items-center gap-3">
               <div className="bg-white p-3 rounded-xl shadow-md inline-flex items-center justify-center">
                 <img
-                  src="/assets/logo-swaraj.svg"
+                  src={withBase('/assets/logo-swaraj.svg')}
                   alt="Swaraj Tours and Travels"
                   className="h-14 w-auto object-contain"
                 />
@@ -238,7 +238,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               {SERVICES.map((s) => (
                 <li key={s.id}>
                   <a
-                    href="/services"
+                    href={withBase('/services')}
                     onClick={(event) => handleSectionLink(event, 'services')}
                     className="hover:text-amber-400 transition-colors text-left flex items-start gap-1"
                   >
@@ -259,7 +259,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               {TOUR_PACKAGES.slice(0, 9).map((p) => (
                 <li key={p.id}>
                   <a
-                    href="/packages"
+                    href={withBase('/packages')}
                     onClick={(event) => handleSectionLink(event, 'packages')}
                     className="hover:text-amber-400 transition-colors text-left flex items-start gap-1"
                   >
@@ -293,7 +293,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               ].map((item) => (
                 <li key={item.target}>
                   <a
-                    href={pageForSection(item.target).path}
+                    href={withBase(pageForSection(item.target).path)}
                     onClick={(event) => handleSectionLink(event, item.target)}
                     className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-left"
                   >
@@ -314,7 +314,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               {POPULAR_ROUTES.slice(0, 8).map((r) => (
                 <li key={r.id}>
                   <a
-                    href="/"
+                    href={withBase('/')}
                     onClick={(event) => {
                       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
                       event.preventDefault();
@@ -329,7 +329,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               ))}
               <li>
                 <a
-                  href="/"
+                  href={withBase('/')}
                   onClick={(event) => handleSectionLink(event, 'routes')}
                   className="text-amber-400 hover:text-amber-300 font-bold transition-colors text-left flex items-center gap-1"
                 >
@@ -346,7 +346,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               {VEHICLES.filter((v) => v.isPopular).map((v) => (
                 <li key={v.id}>
                   <a
-                    href="/services"
+                    href={withBase('/services')}
                     onClick={(event) => handleSectionLink(event, 'fleet')}
                     className="hover:text-amber-400 transition-colors text-left flex items-center gap-1"
                   >
@@ -375,7 +375,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               <React.Fragment key={doc.id}>
                 {idx > 0 && <span className="text-slate-700">|</span>}
                 <a
-                  href={`/policies#${doc.id}`}
+                  href={withBase(`/policies#${doc.id}`)}
                   onClick={(event) => {
                     if (!onOpenLegal || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
                     event.preventDefault();
@@ -388,7 +388,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               </React.Fragment>
             ))}
             <span className="text-slate-700">|</span>
-            <a href="/photo-credits.html" className="hover:text-amber-400 transition-colors">Photo Credits</a>
+            <a href={withBase('/photo-credits.html')} className="hover:text-amber-400 transition-colors">Photo Credits</a>
           </div>
           <div className="flex items-center gap-4">
             <span>Nashik to Mumbai • Pune • Shirdi • Goa • Pan-India</span>

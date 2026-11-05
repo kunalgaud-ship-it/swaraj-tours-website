@@ -19,7 +19,7 @@ import { FloatingActions } from './components/FloatingActions';
 import { AssistanceFormModal } from './components/AssistanceFormModal';
 import { PageHero } from './components/PageHero';
 import { BookingFormData } from './types/travel';
-import { PageMeta, isKnownPath, pageForPath, pageForSection } from './pages';
+import { PageMeta, isKnownPath, pageForPath, pageForSection, siteBaseFromUrl, withBase } from './pages';
 import { applySiteConfig } from './admin/siteConfig';
 import { NotFoundPage } from './components/NotFoundPage';
 
@@ -100,7 +100,10 @@ export default function App() {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    const siteOrigin = canonical.href ? new URL(canonical.href).origin : window.location.origin;
+    // Prerender writes an absolute canonical (origin + base + page). Fall back to the current origin + base.
+    const siteOrigin = canonical.href
+      ? siteBaseFromUrl(canonical.href)
+      : `${window.location.origin}${withBase('/').replace(/\/$/, '')}`;
 
     const setMetaContent = (selector: string, content: string, name: string, key: string) => {
       let element = document.querySelector<HTMLMetaElement>(selector);
@@ -133,7 +136,7 @@ export default function App() {
   const scrollToSection = (sectionId: string) => {
     const target = pageForSection(sectionId);
     if (target.path !== page.path || notFound) {
-      window.history.pushState({}, '', target.path);
+      window.history.pushState({}, '', withBase(target.path));
       setPage(target);
       setNotFound(false);
       setPendingSection(sectionId);
