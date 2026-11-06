@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, Clock, Menu, X, Car, Shield, ChevronRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { Logo } from './Logo';
 import { pageForSection, withBase } from '../pages';
 
 interface NavbarProps {
@@ -94,16 +95,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
           onClick={(event) => handleNavLinkClick(event, 'hero')}
           className="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0"
         >
-          <img width={224} height={64}
-            src={withBase('/assets/logo-swaraj.svg')}
-            alt="Swaraj Cab"
-            className="h-12 sm:h-14 xl:h-12 2xl:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
-          />
-          {/* Tagline: shown on tablet (nav is hidden there) and very wide screens; hidden where the full nav needs the room */}
-          <div className="hidden min-[480px]:block xl:hidden min-[1700px]:block leading-tight whitespace-nowrap">
-            <div className="text-[11px] text-amber-600 font-bold">Safe • Reliable • 24/7</div>
-            <div className="text-[11px] text-slate-600 font-semibold">Nashik to Pan-India</div>
-          </div>
+          <span className="sr-only">Swaraj Cab, home</span>
+          <Logo className="group-hover:opacity-90 transition-opacity" />
         </a>
 
         {/* Desktop Links */}

@@ -19,6 +19,7 @@ import {
 import { COMPANY_INFO, POPULAR_ROUTES, VEHICLES, TOUR_PACKAGES, SERVICES } from '../data/travelData';
 import type { LegalDocType } from './LegalModal';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { Logo } from './Logo';
 import { pageForSection, withBase } from '../pages';
 
 interface FooterProps {
@@ -165,13 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="bg-white p-3 rounded-xl shadow-md inline-flex items-center justify-center">
-                <img width={224} height={64}
-                  src={withBase('/assets/logo-swaraj.svg')}
-                  alt="Swaraj Cab"
-                  className="h-14 w-auto object-contain"
-                />
-              </div>
+              <Logo theme="light" size="lg" />
             </div>
 
             <p className="text-slate-400 leading-relaxed max-w-sm">

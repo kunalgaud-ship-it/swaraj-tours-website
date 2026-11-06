@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CheckCircle, MessageSquare, Phone } from 'lucide-react';
 import { COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { Logo } from './Logo';
 
 export const AssistanceSection: React.FC = () => {
   const [name, setName] = useState('');
@@ -190,15 +191,7 @@ export const AssistanceSection: React.FC = () => {
 
                   {/* Brand Logo on Right */}
                   <div className="shrink-0 flex items-center">
-                    <img width={192} height={64}
-                      src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/logo-swaraj.svg`}
-                      alt="Swaraj Cab"
-                      className="h-12 sm:h-14 w-auto object-contain"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        target.style.display = 'none';
-                      }}
-                    />
+                    <Logo />
                   </div>
                 </div>
 

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160" role="img" aria-labelledby="logo-title logo-description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="520" height="140" role="img" aria-labelledby="logo-title logo-description">
   <title id="logo-title">Swaraj Cab</title>
   <desc id="logo-description">Swaraj Cab, 24/7 cab service in Nashik.</desc>
   <defs>
-    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="coin" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1e3a5f"/>
       <stop offset="1" stop-color="#0b1a2e"/>
     </linearGradient>
@@ -10,49 +10,24 @@
       <stop offset="0" stop-color="#fbbf24"/>
       <stop offset="1" stop-color="#f59e0b"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
+    <pattern id="checker" width="16" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#0f172a"/>
+      <rect x="8" width="8" height="8" fill="#f59e0b"/>
+    </pattern>
   </defs>
 
-  <!-- Badge -->
-  <rect x="8" y="8" width="144" height="144" rx="36" fill="url(#badge)"/>
-  <rect x="8" y="8" width="144" height="72" rx="36" fill="url(#shine)"/>
-  <rect x="13" y="13" width="134" height="134" rx="32" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
-
-  <!-- Motion lines -->
-  <path d="M24 86h22M18 100h28M26 114h18" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" stroke-opacity=".9"/>
-
-  <!-- Roof sign -->
-  <rect x="76" y="44" width="34" height="13" rx="4" fill="url(#gold)"/>
-  <rect x="80" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
-  <rect x="87" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
-  <rect x="94" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
-  <rect x="101" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
-
-  <!-- Cab body -->
-  <path d="M52 100v-8c0-4 2-7 6-8l10-19c2-4 6-6 10-6h30c4 0 8 2 10 6l9 17 8 2c4 1 6 4 6 8v8c0 3-2 5-5 5H57c-3 0-5-2-5-5z" fill="url(#gold)"/>
-  <!-- Windows -->
-  <path d="M69 83l7-15c1-2 3-3 5-3h11v18H69zm29 0V65h9c2 0 4 1 5 3l7 15H98z" fill="#0b1a2e"/>
-  <!-- Door line and handle -->
-  <path d="M97 84v20" stroke="#b45309" stroke-width="2" stroke-opacity=".6"/>
-  <rect x="100" y="90" width="7" height="3" rx="1.5" fill="#0b1a2e" fill-opacity=".55"/>
-  <!-- Headlight and taillight -->
-  <rect x="131" y="92" width="8" height="5" rx="2" fill="#fff7d6"/>
-  <rect x="52" y="92" width="6" height="5" rx="2" fill="#dc2626"/>
-  <!-- Wheels -->
-  <circle cx="74" cy="106" r="10" fill="#0b1a2e"/>
-  <circle cx="74" cy="106" r="4.5" fill="#fbbf24"/>
-  <circle cx="118" cy="106" r="10" fill="#0b1a2e"/>
-  <circle cx="118" cy="106" r="4.5" fill="#fbbf24"/>
-  <!-- Road -->
-  <path d="M36 128h92" stroke="#ffffff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <!-- Mark: navy coin, amber S road with route markers -->
+  <g transform="translate(10 10) scale(1.2)">
+    <circle cx="50" cy="50" r="48" fill="url(#coin)"/>
+    <circle cx="50" cy="50" r="42.5" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
+    <path d="M66 27H42a11 11 0 0 0 0 22h16a11 11 0 0 1 0 22H34" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M66 27H42a11 11 0 0 0 0 22h16a11 11 0 0 1 0 22H34" fill="none" stroke="#0b1a2e" stroke-opacity=".75" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="4.5 5"/>
+    <circle cx="66" cy="27" r="6" fill="#ffffff"/><circle cx="66" cy="27" r="2.4" fill="#0b1a2e"/>
+    <circle cx="34" cy="71" r="6" fill="#ffffff"/><circle cx="34" cy="71" r="2.4" fill="#0b1a2e"/>
+  </g>
 
   <!-- Wordmark -->
-  <text x="176" y="80" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="64" font-weight="900" letter-spacing="1" fill="#0f2742">SWARAJ</text>
-  <text x="178" y="130" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="46" font-weight="900" letter-spacing="9" fill="#f59e0b">CAB</text>
-  <path d="M318 118v-22" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
-  <text x="332" y="108" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="3" fill="#0f2742">NASHIK</text>
-  <text x="332" y="129" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#64748b">24/7 CAB SERVICE</text>
+  <text x="150" y="76" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="48" font-weight="900" letter-spacing="-0.5" fill="#0f172a">SWARAJ<tspan dx="14" fill="#f59e0b">CAB</tspan></text>
+  <rect x="152" y="88" width="350" height="6" rx="1.5" fill="url(#checker)"/>
+  <text x="153" y="118" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#64748b">NASHIK  ·  24/7 CAB SERVICE</text>
 </svg>
