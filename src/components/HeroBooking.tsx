@@ -193,7 +193,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
       tripType === 'round-trip' ? `Return Date: ${returnDate}` : null,
       `Vehicle Selected: ${selectedCar.name}`,
       `Passengers: ${passengers}`,
-      `Estimated Approx Fare: ₹${estimatedInfo.estimatedFare.toLocaleString()}`,
+      `Estimated Approx Fare: ₹${estimatedInfo.estimatedFare.toLocaleString()} (toll & parking extra)`,
       customerName ? `Name: ${customerName}` : null,
       customerPhone ? `Contact: ${customerPhone}` : null,
       customerEmail ? `Email: ${customerEmail}` : null,
@@ -720,6 +720,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                       ({selectedCar.name.split(' ')[0]} @ ₹{selectedCar.ratePerKm}/km)
                     </span>
                   </div>
+                  <div className="text-[11px] font-semibold text-amber-800">Toll & parking extra</div>
                 </div>
                 <div className="hidden sm:block text-[11px] text-slate-500 border-l border-amber-200 pl-3">
                   <div>✓ Free Cancellation</div>

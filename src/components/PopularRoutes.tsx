@@ -56,7 +56,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
 
   const handleWhatsAppRoute = (route: PopularRoute) => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I want to book a cab for the route: *${route.from} to ${route.to}* (Starting Fare: \u20B9${route.startingPrice}${['nashik-mumbai', 'nashik-shirdi', 'nashik-shirdi-shani', 'nashik-saptashrungi', 'nashik-bhimashankar', 'nashik-lonavala', 'nashik-saputara', 'nashik-alibaug'].includes(route.id) ? ', toll and parking extra' : ''}). Please confirm available cabs & timing.`
+      `Hello Swaraj Cab, I want to book a cab for the route: *${route.from} to ${route.to}* (Starting Fare: \u20B9${route.startingPrice}, toll and parking extra). Please confirm available cabs & timing.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -165,13 +165,11 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
                       {'\u20B9'}{route.startingPrice.toLocaleString()}
                     </span>
                   </div>
-                  <span className={`text-[11px] font-semibold px-2 py-0.5 rounded border ${['nashik-mumbai', 'nashik-shirdi', 'nashik-shirdi-shani', 'nashik-saptashrungi', 'nashik-bhimashankar', 'nashik-lonavala', 'nashik-saputara', 'nashik-alibaug'].includes(route.id) ? 'text-amber-800 bg-amber-50 border-amber-200' : 'text-emerald-700 bg-emerald-50 border-emerald-200'}`}>
-                    {['nashik-mumbai', 'nashik-shirdi', 'nashik-shirdi-shani', 'nashik-saptashrungi', 'nashik-bhimashankar', 'nashik-lonavala', 'nashik-saputara', 'nashik-alibaug'].includes(route.id) ? 'Toll & parking extra' : 'All-Inclusive Option'}
+                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded border text-amber-800 bg-amber-50 border-amber-200">
+                    Toll & parking extra
                   </span>
                 </div>
-                {['nashik-mumbai', 'nashik-shirdi', 'nashik-shirdi-shani', 'nashik-saptashrungi', 'nashik-bhimashankar', 'nashik-lonavala', 'nashik-saputara', 'nashik-alibaug'].includes(route.id) && (
-                  <p className="text-[11px] text-slate-500 mb-3">Starting fare shown; toll and parking charges are not included.</p>
-                )}
+                <p className="text-[11px] text-slate-500 mb-3">Starting fare shown; toll and parking charges are extra at actuals.</p>
 
                 <div className="grid grid-cols-3 gap-1.5">
                   <button

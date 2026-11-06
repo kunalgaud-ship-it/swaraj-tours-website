@@ -36,7 +36,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
 
   const handleWhatsAppPackage = (pkg: TourPackage) => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I am interested in your *${pkg.title}* (${pkg.duration}, Starting ₹${pkg.startingPrice}). Please send detailed pricing and vehicle options for our group.`
+      `Hello Swaraj Cab, I am interested in your *${pkg.title}* (${pkg.duration}, Starting ₹${pkg.startingPrice}, toll and parking extra). Please send detailed pricing and vehicle options for our group.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -104,8 +104,9 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
                 </div>
 
                 {/* Price Pill */}
-                <div className="absolute bottom-3 right-3 bg-slate-900/90 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                <div className="absolute bottom-3 right-3 bg-slate-900/90 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-extrabold px-3 py-1 rounded-full shadow text-right leading-tight">
                   From ₹{pkg.startingPrice.toLocaleString()}
+                  <span className="block text-[9px] font-semibold text-amber-200/90">Toll & parking extra</span>
                 </div>
 
                 <div className="absolute bottom-3 left-4 right-28">
@@ -136,7 +137,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {pkg.permitsReady && (
                       <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200">
-                        <ShieldCheck className="w-3 h-3" /> Permits & tolls handled
+                        <ShieldCheck className="w-3 h-3" /> Permits arranged
                       </span>
                     )}
                     {pkg.seniorFriendly && (
@@ -221,7 +222,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
                 <span className="text-2xl font-black text-slate-900">
                   ₹{activePackageModal.startingPrice.toLocaleString()}
                 </span>
-                <span className="text-xs text-slate-500 ml-1.5">(Cab + Driver + Tolls included)</span>
+                <span className="text-xs text-slate-500 ml-1.5">(Cab + Driver; toll & parking extra)</span>
               </div>
               <button
                 onClick={() => handleWhatsAppPackage(activePackageModal)}

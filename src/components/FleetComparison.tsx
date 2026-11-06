@@ -216,7 +216,7 @@ export const FleetComparison: React.FC<FleetComparisonProps> = ({ onSelectCar })
           </table>
         </div>
         <p className="mt-4 text-center text-[11px] text-slate-500">
-          Fares are indicative estimates. Tolls, parking, state permits and GST are billed at actuals or quoted upfront in all-inclusive packages.
+          Fares are indicative estimates. Toll & parking extra; state permits and GST are billed at actuals.
         </p>
       </div>
     </section>

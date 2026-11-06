@@ -74,8 +74,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookService 
                   <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200 flex items-center justify-center group-hover:scale-110 transition-transform">
                     {getIcon(srv.icon)}
                   </div>
-                  <span className="text-[11px] font-extrabold text-amber-800 bg-amber-100/90 px-2.5 py-1 rounded-md">
+                  <span className="text-[11px] font-extrabold text-amber-800 bg-amber-100/90 px-2.5 py-1 rounded-md text-right leading-tight">
                     {srv.startingPriceTag}
+                    <span className="block text-[9px] font-semibold">Toll & parking extra</span>
                   </span>
                 </div>
 

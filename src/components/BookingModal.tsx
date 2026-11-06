@@ -37,7 +37,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ bookingData, onClose
       (bookingData.returnDate ? `Return Date: ${bookingData.returnDate}\n` : '') +
       `Vehicle: ${vehicle.name}\n` +
       `Passengers: ${bookingData.passengers}\n` +
-      `Estimated Fare: ₹${bookingData.estimatedFare?.toLocaleString() || 'N/A'}\n` +
+      `Estimated Fare: ₹${bookingData.estimatedFare?.toLocaleString() || 'N/A'} (toll & parking extra)\n` +
       `Traveler: ${bookingData.customerName} (${bookingData.customerPhone})\n\n` +
       `Please assign vehicle and driver details.`
     );
@@ -126,8 +126,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ bookingData, onClose
           {bookingData.estimatedFare && (
             <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
               <span className="font-bold text-slate-700">Estimated Fare</span>
-              <span className="text-lg font-black text-amber-600">
-                ₹{bookingData.estimatedFare.toLocaleString()}
+              <span className="text-right">
+                <span className="text-lg font-black text-amber-600 block">
+                  ₹{bookingData.estimatedFare.toLocaleString()}
+                </span>
+                <span className="text-[10px] font-semibold text-slate-500">Toll & parking extra</span>
               </span>
             </div>
           )}
