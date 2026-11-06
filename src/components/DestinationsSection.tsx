@@ -19,16 +19,16 @@ import {
 import { DESTINATIONS, COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { Destination } from '../types/travel';
-import shirdiTempleImage from '../assets/images/shirdi-sai-temple.jpg';
-import trimbakeshwarTempleImage from '../assets/images/trimbakeshwar-temple.jpg';
-import mumbaiImage from '../assets/images/mumbai-skyline.jpg';
-import puneImage from '../assets/images/shaniwar-wada.jpg';
-import elloraImage from '../assets/images/ellora-caves.jpg';
-import mahabaleshwarImage from '../assets/images/mahabaleshwar.jpg';
-import saputaraImage from '../assets/images/saputara.jpg';
-import konkanImage from '../assets/images/alibaug-beach.jpg';
-import goaImage from '../assets/images/goa-beach.jpg';
-import nashikImage from '../assets/images/nashik-ramkund.jpg';
+import shirdiTempleImage from '../assets/images/shirdi-sai-temple.webp';
+import trimbakeshwarTempleImage from '../assets/images/trimbakeshwar-temple.webp';
+import mumbaiImage from '../assets/images/mumbai-skyline.webp';
+import puneImage from '../assets/images/shaniwar-wada.webp';
+import elloraImage from '../assets/images/ellora-caves.webp';
+import mahabaleshwarImage from '../assets/images/mahabaleshwar.webp';
+import saputaraImage from '../assets/images/saputara.webp';
+import konkanImage from '../assets/images/alibaug-beach.webp';
+import goaImage from '../assets/images/goa-beach.webp';
+import nashikImage from '../assets/images/nashik-ramkund.webp';
 
 interface DestinationsSectionProps {
   /** Pre-fills the booking box with the chosen destination as the drop city (pickup stays Nashik). */
@@ -134,7 +134,7 @@ export const DestinationsSection: React.FC<DestinationsSectionProps> = ({ onSele
               >
                 {/* Real temple photos for pilgrimage destinations; gradient treatment for other cards. */}
                 <div className={`relative ${photo ? 'bg-slate-900' : `bg-gradient-to-br ${accent.header}`} text-white p-4 h-32 flex flex-col justify-between overflow-hidden`}>
-                  {photo && <img src={photo.src} alt={photo.alt} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" loading="lazy" />}
+                  {photo && <img width={800} height={600} src={photo.src} alt={photo.alt} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" loading="lazy" />}
                   {photo && <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-slate-950/30" />}
                   {!photo && <div className="absolute -right-6 -bottom-8 w-32 h-32 rounded-full bg-white/10 group-hover:scale-125 transition-transform duration-500" />}
                   <div className="flex items-start justify-between relative">

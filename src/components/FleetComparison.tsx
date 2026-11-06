@@ -102,7 +102,7 @@ export const FleetComparison: React.FC<FleetComparisonProps> = ({ onSelectCar })
                 {COMPARED_VEHICLES.map((v) => (
                   <th key={v.id} className="px-4 py-4 text-center">
                     <div className="flex flex-col items-center gap-1">
-                      <img
+                      <img width={800} height={600}
                         src={v.image}
                         alt={v.name}
                         className="w-24 h-14 object-cover rounded-lg border border-slate-700"

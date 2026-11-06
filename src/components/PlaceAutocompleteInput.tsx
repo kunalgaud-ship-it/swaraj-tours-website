@@ -181,7 +181,8 @@ export const PlaceAutocompleteInput: React.FC<PlaceAutocompleteInputProps> = ({
             <button
               type="button"
               onClick={handleClear}
-              className="text-slate-400 hover:text-slate-600 p-0.5 rounded-full hover:bg-slate-200/60"
+              aria-label="Clear location"
+              className="min-h-11 min-w-11 flex items-center justify-center text-slate-500 hover:text-slate-700 rounded-full hover:bg-slate-200/60"
             >
               <X className="w-3.5 h-3.5" />
             </button>

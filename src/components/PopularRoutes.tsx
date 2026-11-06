@@ -14,7 +14,7 @@ import {
 import { PopularRoute, RouteCategory } from '../types/travel';
 import { POPULAR_ROUTES, ROUTE_HUBS, COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { DestinationMapModal } from './DestinationMapModal';
+const DestinationMapModal = React.lazy(() => import('./DestinationMapModal').then((module) => ({ default: module.DestinationMapModal })));
 import { Plane, Church, Mountain, Waves, Route as RouteIcon, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 
 interface PopularRoutesProps {
@@ -87,7 +87,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
                   key={f.id}
                   type="button"
                   onClick={() => setFilterType(f.id)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5 ${
+                  className={`min-h-11 px-3.5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-1.5 ${
                     active ? 'bg-amber-500 text-slate-950 shadow-sm' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                   }`}
                 >
@@ -177,7 +177,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
                   <button
                     type="button"
                     onClick={() => setActiveMapRoute({ from: route.from, to: route.to })}
-                    className="py-2.5 px-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-bold transition-colors flex items-center justify-center gap-1 border border-blue-200 cursor-pointer"
+                    className="min-h-11 px-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-bold transition-colors flex items-center justify-center gap-1 border border-blue-200 cursor-pointer"
                     title="View route & distance on Google Maps"
                   >
                     <MapIcon className="w-3.5 h-3.5 text-blue-600" />
@@ -303,6 +303,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
 
       {/* Route Map Preview Modal */}
       {activeMapRoute && (
+        <React.Suspense fallback={null}>
         <DestinationMapModal
           isOpen={true}
           onClose={() => setActiveMapRoute(null)}
@@ -313,6 +314,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
             setActiveMapRoute(null);
           }}
         />
+        </React.Suspense>
       )}
     </section>
   );

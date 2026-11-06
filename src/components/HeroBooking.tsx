@@ -19,9 +19,9 @@ import {
 import { TripType, BookingFormData } from '../types/travel';
 import { VEHICLES, POPULAR_CITIES, COMPANY_INFO } from '../data/travelData';
 import { PlaceAutocompleteInput, PlaceSelection } from './PlaceAutocompleteInput';
-import { DestinationMapModal } from './DestinationMapModal';
+const DestinationMapModal = React.lazy(() => import('./DestinationMapModal').then((module) => ({ default: module.DestinationMapModal })));
 import { WhatsAppIcon } from './WhatsAppIcon';
-import heroBackground from '../assets/images/innova_crysta_cab_1792438495834.jpg';
+const heroBackground = `${import.meta.env.BASE_URL}images/hero-cab.webp`;
 
 const toLocalDateValue = (date: Date) => {
   const year = date.getFullYear();
@@ -261,6 +261,8 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
         <img
           src={heroBackground}
           alt=""
+          width={1000}
+          height={747}
           className="w-full h-full object-contain object-top sm:object-cover sm:object-[center_60%] hero-kenburns"
           fetchPriority="high"
         />
@@ -429,6 +431,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                   <button
                     type="button"
                     onClick={swapCities}
+                    aria-label="Swap pickup and drop locations"
                     className="p-2 rounded-full bg-slate-100 hover:bg-amber-100 hover:text-amber-700 text-slate-600 border border-slate-200 shadow-sm transition-all cursor-pointer"
                     title="Swap Pickup and Drop Locations"
                   >
@@ -441,10 +444,11 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
               <div className="md:col-span-5 relative">
                 {tripType === 'local' ? (
                   <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                    <label htmlFor="local-package" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                       Select Local Hourly Package
                     </label>
                     <select
+                      id="local-package"
                       value={localPackage}
                       onChange={(e) => setLocalPackage(e.target.value)}
                       className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-amber-500 font-medium"
@@ -456,11 +460,12 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                   </div>
                 ) : tripType === 'airport' ? (
                   <div>
-                    <label htmlFor="drop-location" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                    <label htmlFor="airport-direction" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                       Airport & Service Direction
                     </label>
                     <div className="grid grid-cols-2 gap-2">
                       <select
+                        id="airport-direction"
                         value={airportType}
                         onChange={(e) => setAirportType(e.target.value as 'drop' | 'pickup')}
                         className="px-2 py-2.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 font-medium"
@@ -469,6 +474,8 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                         <option value="pickup">Pickup from Airport</option>
                       </select>
                       <select
+                        id="airport-destination"
+                        aria-label="Airport destination"
                         value={dropCity}
                         onChange={(e) => setDropCity(e.target.value)}
                         className="px-2 py-2.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 font-medium"
@@ -482,7 +489,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                   </div>
                 ) : (
                   <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                    <label htmlFor="drop-location" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                       Drop Destination
                     </label>
                     <PlaceAutocompleteInput
@@ -506,7 +513,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                   key={spot}
                   type="button"
                   onClick={() => setPickupCity(`${spot}, Nashik`)}
-                  className="px-2.5 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-semibold border border-emerald-200 transition-colors cursor-pointer"
+                  className="min-h-11 px-2.5 py-2 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-semibold border border-emerald-200 transition-colors cursor-pointer"
                 >
                   {spot}
                 </button>
@@ -522,7 +529,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                     key={city}
                     type="button"
                     onClick={() => setDropCity(city === 'Sambhajinagar' ? 'Chhatrapati Sambhajinagar (Aurangabad)' : city)}
-                    className="px-2.5 py-1 rounded bg-slate-100 hover:bg-amber-100 hover:text-amber-800 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors cursor-pointer"
+                    className="min-h-11 px-2.5 py-2 rounded bg-slate-100 hover:bg-amber-100 hover:text-amber-800 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors cursor-pointer"
                   >
                     {city}
                   </button>
@@ -534,7 +541,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
               {/* Pickup Date */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                <label htmlFor="pickup-date" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                   Pickup Date
                 </label>
                 <div className="relative">
@@ -542,6 +549,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                     <Calendar className="w-4 h-4 text-slate-500" />
                   </div>
                   <input
+                    id="pickup-date"
                     type="date"
                     required
                     min={toLocalDateValue(new Date())}
@@ -555,7 +563,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
               {/* Pickup Time or Return Date */}
               {tripType === 'round-trip' ? (
                 <div>
-                  <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                  <label htmlFor="return-date" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                     Return Date
                   </label>
                   <div className="relative">
@@ -563,6 +571,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                       <Calendar className="w-4 h-4 text-slate-500" />
                     </div>
                     <input
+                      id="return-date"
                       type="date"
                       required
                       min={pickupDate}
@@ -574,7 +583,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                 </div>
               ) : (
                 <div>
-                  <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                  <label htmlFor="pickup-time" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                     Pickup Time
                   </label>
                   <div className="relative">
@@ -582,6 +591,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                       <Clock className="w-4 h-4 text-slate-500" />
                     </div>
                     <input
+                      id="pickup-time"
                       type="time"
                       required
                       value={pickupTime}
@@ -594,11 +604,12 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
 
               {/* Vehicle Selection */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                <label htmlFor="selected-vehicle" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                   Select Vehicle
                 </label>
                 <div className="relative">
                   <select
+                    id="selected-vehicle"
                     value={selectedCarId}
                     onChange={(e) => setSelectedCarId(e.target.value)}
                     className="w-full px-3 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 font-semibold text-slate-800"
@@ -614,7 +625,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
 
               {/* Passenger Count */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                <label htmlFor="passengers" className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                   Passengers
                 </label>
                 <div className="relative">
@@ -622,6 +633,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                     <Users className="w-4 h-4 text-slate-500" />
                   </div>
                   <input
+                    id="passengers"
                     type="number"
                     min="1"
                     max={selectedCar.seats}
@@ -636,10 +648,11 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
             {/* Contact details mini-inputs for rapid callback */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 bg-slate-50 p-3 rounded-xl border border-slate-200">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 mb-1">
+                <label htmlFor="customer-phone" className="block text-[11px] font-bold text-slate-600 mb-1">
                   WhatsApp / Mobile Number *
                 </label>
                 <input
+                  id="customer-phone"
                   type="tel"
                   required
                   maxLength={30}
@@ -651,10 +664,11 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 mb-1">
+                <label htmlFor="customer-name" className="block text-[11px] font-bold text-slate-600 mb-1">
                   Your Name (Optional)
                 </label>
                 <input
+                  id="customer-name"
                   type="text"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
@@ -663,10 +677,11 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 mb-1">
+                <label htmlFor="customer-email" className="block text-[11px] font-bold text-slate-600 mb-1">
                   Email (Required for booking confirmation)
                 </label>
                 <input
+                  id="customer-email"
                   type="email"
                   required
                   value={customerEmail}
@@ -690,6 +705,8 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
                 <img
                   src={selectedCar.image}
                   alt={selectedCar.name}
+                  width={320}
+                  height={240}
                   referrerPolicy="no-referrer"
                   className="w-16 h-12 rounded-lg object-cover border border-amber-300 shadow-sm shrink-0"
                 />
@@ -748,16 +765,18 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
       </div>
 
       {/* Interactive Google Map Route Modal */}
-      <DestinationMapModal
-        isOpen={isMapModalOpen}
-        onClose={() => setIsMapModalOpen(false)}
-        initialPickup={pickupCity}
-        initialDrop={dropCity}
-        onApplyLocations={(p, d) => {
-          setPickupCity(p);
-          setDropCity(d);
-        }}
-      />
+      <React.Suspense fallback={null}>
+        <DestinationMapModal
+          isOpen={isMapModalOpen}
+          onClose={() => setIsMapModalOpen(false)}
+          initialPickup={pickupCity}
+          initialDrop={dropCity}
+          onApplyLocations={(p, d) => {
+            setPickupCity(p);
+            setDropCity(d);
+          }}
+        />
+      </React.Suspense>
     </section>
   );
 };

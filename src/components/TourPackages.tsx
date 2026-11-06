@@ -84,7 +84,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
             >
               {/* Image banner */}
               <div className="relative h-52 overflow-hidden bg-slate-900">
-                <img
+                <img width={800} height={600}
                   src={pkg.image}
                   alt={pkg.title}
                   referrerPolicy="no-referrer"
@@ -206,7 +206,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
 
             {/* Real Tour Photo Preview */}
             <div className="h-44 sm:h-52 w-full rounded-xl overflow-hidden mb-4 border border-slate-200">
-              <img
+              <img width={800} height={600}
                 src={activePackageModal.image}
                 alt={activePackageModal.title}
                 referrerPolicy="no-referrer"

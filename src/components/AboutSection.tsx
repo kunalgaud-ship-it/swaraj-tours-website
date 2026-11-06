@@ -16,8 +16,8 @@ import {
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/travelData';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import fleetImage from '../assets/images/innova_crysta_cab_1792438495834.jpg';
-import pilgrimageImage from '../assets/images/trimbakeshwar-temple.jpg';
+import fleetImage from '../assets/images/innova_crysta_cab_1792438495834.webp';
+import pilgrimageImage from '../assets/images/trimbakeshwar-temple.webp';
 
 interface AboutSectionProps {
   onBookNow?: () => void;
@@ -115,7 +115,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onBookNow }) => {
           {/* Image Collage */}
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-              <img
+              <img width={800} height={600}
                 src={fleetImage}
                 alt={`${COMPANY_INFO.name} premium Innova Crysta fleet`}
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover"
@@ -123,7 +123,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onBookNow }) => {
               />
             </div>
             <div className="hidden sm:block absolute -bottom-6 -right-4 lg:-right-8 w-44 lg:w-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-              <img
+              <img width={800} height={600}
                 src={pilgrimageImage}
                 alt="Pilgrimage tours across Maharashtra"
                 className="w-full h-32 lg:h-40 object-cover"

@@ -87,7 +87,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onSelectCar }) => {
             >
               {/* Vehicle Image Container */}
               <div className="relative h-52 sm:h-56 bg-slate-900 overflow-hidden">
-                <img
+                <img width={800} height={600}
                   src={vehicle.image}
                   alt={vehicle.name}
                   referrerPolicy="no-referrer"
@@ -238,7 +238,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onSelectCar }) => {
 
             {/* Real Vehicle Image Preview */}
             <div className="h-44 sm:h-52 w-full rounded-xl overflow-hidden mb-4 border border-slate-200">
-              <img
+              <img width={800} height={600}
                 src={selectedVehicleForModal.image}
                 alt={selectedVehicleForModal.name}
                 referrerPolicy="no-referrer"

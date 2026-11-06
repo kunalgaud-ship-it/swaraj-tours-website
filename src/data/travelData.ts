@@ -11,20 +11,20 @@ import {
   Destination,
 } from '../types/travel';
 
-import swiftDzireImage from '../assets/images/swift_dzire_sedan_1792438497353.jpg';
-import auraImage from '../assets/images/hyundai-aura-user-choice.png';
-import ertigaImage from '../assets/images/ertiga_family_cab_1792438496951.jpg';
-import innovaImage from '../assets/images/innova_crysta_cab_1792438495834.jpg';
-import tempoImage from '../assets/images/tempo_traveller_coach_1792438498356.jpg';
-import urbaniaImage from '../assets/images/force-urbania-user-choice.jpg';
-import shirdiImage from '../assets/images/shirdi-sai-temple.jpg';
-import trimbakeshwarImage from '../assets/images/trimbakeshwar-temple.jpg';
-import morgaonImage from '../assets/images/morgaon-temple.jpg';
-import mahableshwarImage from '../assets/images/mahabaleshwar.jpg';
-import alibaugImage from '../assets/images/alibaug-beach.jpg';
-import goaImage from '../assets/images/goa-beach.jpg';
-import nashikImage from '../assets/images/nashik-ramkund.jpg';
-import tuljaImage from '../assets/images/tulja-bhavani.jpg';
+import swiftDzireImage from '../assets/images/swift_dzire_sedan_1792438497353.webp';
+import auraImage from '../assets/images/hyundai-aura-user-choice.webp';
+import ertigaImage from '../assets/images/ertiga_family_cab_1792438496951.webp';
+import innovaImage from '../assets/images/innova_crysta_cab_1792438495834.webp';
+import tempoImage from '../assets/images/tempo_traveller_coach_1792438498356.webp';
+import urbaniaImage from '../assets/images/force-urbania-user-choice.webp';
+import shirdiImage from '../assets/images/shirdi-sai-temple.webp';
+import trimbakeshwarImage from '../assets/images/trimbakeshwar-temple.webp';
+import morgaonImage from '../assets/images/morgaon-temple.webp';
+import mahableshwarImage from '../assets/images/mahabaleshwar.webp';
+import alibaugImage from '../assets/images/alibaug-beach.webp';
+import goaImage from '../assets/images/goa-beach.webp';
+import nashikImage from '../assets/images/nashik-ramkund.webp';
+import tuljaImage from '../assets/images/tulja-bhavani.webp';
 
 export const COMPANY_INFO = {
   name: "Swaraj Tours and Travels",

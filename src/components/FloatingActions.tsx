@@ -35,7 +35,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onScrollToTop,
       <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-2 mobile-action-bar flex items-center gap-1.5 shadow-2xl">
         <a
           href={`tel:${COMPANY_INFO.rawPhone}`}
-          className="flex-1 py-2 px-2 rounded-xl bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center gap-1 shadow"
+          className="min-h-11 flex-1 py-2 px-2 rounded-xl bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center gap-1 shadow"
         >
           <Phone className="w-3.5 h-3.5" />
           <span>Call</span>
@@ -43,7 +43,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onScrollToTop,
 
         <button
           onClick={handleWhatsApp}
-          className="flex-1 py-2 px-2 rounded-xl bg-emerald-600 text-white font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
+          className="min-h-11 flex-1 py-2 px-2 rounded-xl bg-emerald-600 text-white font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
         >
           <WhatsAppIcon className="w-3.5 h-3.5" />
           <span>WhatsApp</span>
@@ -52,7 +52,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onScrollToTop,
         {onOpenAssistance && (
           <button
             onClick={onOpenAssistance}
-            className="flex-1 py-2 px-2 rounded-xl bg-black text-white font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
+            className="min-h-11 flex-1 py-2 px-2 rounded-xl bg-black text-white font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
             title="Need Assistance?"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -62,7 +62,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onScrollToTop,
 
         <button
           onClick={onOpenBooking}
-          className="py-2 px-3 rounded-xl bg-slate-900 text-amber-400 font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
+          className="min-h-11 py-2 px-3 rounded-xl bg-slate-900 text-amber-400 font-black text-xs flex items-center justify-center gap-1 shadow cursor-pointer"
           title="Open Booking Engine"
         >
           <Car className="w-3.5 h-3.5" />

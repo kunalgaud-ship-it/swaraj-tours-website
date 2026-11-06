@@ -94,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
           onClick={(event) => handleNavLinkClick(event, 'hero')}
           className="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0"
         >
-          <img
+          <img width={224} height={64}
             src={withBase('/assets/logo-swaraj.svg')}
             alt="Swaraj Tours and Travels"
             className="h-12 sm:h-14 xl:h-12 2xl:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
@@ -154,7 +154,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
         {/* Mobile / Tablet Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="xl:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none shrink-0"
+          className="xl:hidden min-h-11 min-w-11 p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none shrink-0"
           aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

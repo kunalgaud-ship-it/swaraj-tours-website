@@ -78,7 +78,7 @@ export const TravelGuides: React.FC<TravelGuidesProps> = ({ onBookNow }) => {
               className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
             >
               <div className="relative h-44 overflow-hidden">
-                <img
+                <img width={800} height={600}
                   src={g.image}
                   alt={g.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -123,7 +123,7 @@ export const TravelGuides: React.FC<TravelGuidesProps> = ({ onBookNow }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative h-52">
-              <img src={active.image} alt={active.title} className="w-full h-full object-cover" />
+              <img width={800} height={600} src={active.image} alt={active.title} className="w-full h-full object-cover" />
               <button
                 type="button"
                 onClick={() => setActive(null)}

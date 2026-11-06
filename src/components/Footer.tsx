@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
           <div className="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5">
             <div className="flex items-center gap-2 mb-2">
               <BellRing className="w-4 h-4 text-amber-400" />
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Get Offer Alerts on WhatsApp</h4>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">Get Offer Alerts on WhatsApp</h3>
             </div>
             <p className="text-slate-400 mb-4">
               Festival discounts, new routes and flash deals. No spam, opt out anytime.
@@ -110,6 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               <form onSubmit={handleSubscribe} className="space-y-2">
                 <div className="flex gap-2">
                   <input
+                    aria-label="WhatsApp phone number for offer alerts"
                     type="tel"
                     value={alertPhone}
                     onChange={(e) => setAlertPhone(e.target.value)}
@@ -118,7 +119,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black whitespace-nowrap transition-colors cursor-pointer"
+                    className="min-h-11 px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black whitespace-nowrap transition-colors cursor-pointer"
                   >
                     Subscribe
                   </button>
@@ -130,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-3">We Accept</h4>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-3">We Accept</h3>
               <div className="grid grid-cols-2 gap-2">
                 {paymentMethods.map((p) => {
                   const Icon = p.icon;
@@ -144,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               </div>
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-3">Why You Can Trust Us</h4>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-3">Why You Can Trust Us</h3>
               <div className="grid grid-cols-2 gap-2">
                 {trustBadges.map((t) => {
                   const Icon = t.icon;
@@ -165,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <div className="bg-white p-3 rounded-xl shadow-md inline-flex items-center justify-center">
-                <img
+                <img width={224} height={64}
                   src={withBase('/assets/logo-swaraj.svg')}
                   alt="Swaraj Tours and Travels"
                   className="h-14 w-auto object-contain"
@@ -207,7 +208,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
             {/* Social links */}
             <div className="pt-2">
-              <h4 className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Contact & Chat</h4>
+              <h3 className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Contact & Chat</h3>
               <div className="flex items-center gap-2">
                 {socialLinks.map((s) => {
                   const Icon = s.icon;
@@ -231,9 +232,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
           {/* Cab Services */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">
               Cab Services
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {SERVICES.map((s) => (
                 <li key={s.id}>
@@ -252,9 +253,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
           {/* Tour Packages */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">
               Tour Packages
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {TOUR_PACKAGES.slice(0, 9).map((p) => (
                 <li key={p.id}>
@@ -273,9 +274,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
           {/* Quick Links */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">
               Explore
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {[
                 { label: 'About Us', target: 'about' },
@@ -307,9 +308,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
 
           {/* Popular Routes */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">
               Popular Routes
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {POPULAR_ROUTES.slice(0, 8).map((r) => (
                 <li key={r.id}>
@@ -339,9 +340,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               </li>
             </ul>
 
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider pt-3">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider pt-3">
               Fleet
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {VEHICLES.filter((v) => v.isPopular).map((v) => (
                 <li key={v.id}>
