@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroBooking } from './components/HeroBooking';
 import { WhyChooseUs } from './components/WhyChooseUs';
@@ -20,22 +20,23 @@ import { PageHero } from './components/PageHero';
 import { BookingFormData } from './types/travel';
 import { PageMeta, isKnownPath, pageForPath, pageForSection, siteBaseFromUrl, withBase } from './pages';
 import { applySiteConfig } from './admin/siteConfig';
+import { lazyWithReload } from './lazyWithReload';
 import { NotFoundPage } from './components/NotFoundPage';
 
-const AboutSection = lazy(() => import('./components/AboutSection').then((module) => ({ default: module.AboutSection })));
-const OffersSection = lazy(() => import('./components/OffersSection').then((module) => ({ default: module.OffersSection })));
-const FleetComparison = lazy(() => import('./components/FleetComparison').then((module) => ({ default: module.FleetComparison })));
-const TravelGuides = lazy(() => import('./components/TravelGuides').then((module) => ({ default: module.TravelGuides })));
-const DriverPartnerSection = lazy(() => import('./components/DriverPartnerSection').then((module) => ({ default: module.DriverPartnerSection })));
-const FleetSection = lazy(() => import('./components/FleetSection').then((module) => ({ default: module.FleetSection })));
-const TourPackages = lazy(() => import('./components/TourPackages').then((module) => ({ default: module.TourPackages })));
-const ServicesSection = lazy(() => import('./components/ServicesSection').then((module) => ({ default: module.ServicesSection })));
-const FareCalculator = lazy(() => import('./components/FareCalculator').then((module) => ({ default: module.FareCalculator })));
-const ReviewsSection = lazy(() => import('./components/ReviewsSection').then((module) => ({ default: module.ReviewsSection })));
-const FaqSection = lazy(() => import('./components/FaqSection').then((module) => ({ default: module.FaqSection })));
-const ContactSection = lazy(() => import('./components/ContactSection').then((module) => ({ default: module.ContactSection })));
-const AssistanceSection = lazy(() => import('./components/AssistanceSection').then((module) => ({ default: module.AssistanceSection })));
-const PoliciesPage = lazy(() => import('./components/PoliciesPage').then((module) => ({ default: module.PoliciesPage })));
+const AboutSection = lazyWithReload(() => import('./components/AboutSection').then((module) => ({ default: module.AboutSection })));
+const OffersSection = lazyWithReload(() => import('./components/OffersSection').then((module) => ({ default: module.OffersSection })));
+const FleetComparison = lazyWithReload(() => import('./components/FleetComparison').then((module) => ({ default: module.FleetComparison })));
+const TravelGuides = lazyWithReload(() => import('./components/TravelGuides').then((module) => ({ default: module.TravelGuides })));
+const DriverPartnerSection = lazyWithReload(() => import('./components/DriverPartnerSection').then((module) => ({ default: module.DriverPartnerSection })));
+const FleetSection = lazyWithReload(() => import('./components/FleetSection').then((module) => ({ default: module.FleetSection })));
+const TourPackages = lazyWithReload(() => import('./components/TourPackages').then((module) => ({ default: module.TourPackages })));
+const ServicesSection = lazyWithReload(() => import('./components/ServicesSection').then((module) => ({ default: module.ServicesSection })));
+const FareCalculator = lazyWithReload(() => import('./components/FareCalculator').then((module) => ({ default: module.FareCalculator })));
+const ReviewsSection = lazyWithReload(() => import('./components/ReviewsSection').then((module) => ({ default: module.ReviewsSection })));
+const FaqSection = lazyWithReload(() => import('./components/FaqSection').then((module) => ({ default: module.FaqSection })));
+const ContactSection = lazyWithReload(() => import('./components/ContactSection').then((module) => ({ default: module.ContactSection })));
+const AssistanceSection = lazyWithReload(() => import('./components/AssistanceSection').then((module) => ({ default: module.AssistanceSection })));
+const PoliciesPage = lazyWithReload(() => import('./components/PoliciesPage').then((module) => ({ default: module.PoliciesPage })));
 
 export default function App() {
   const [bookingModalData, setBookingModalData] = useState<BookingFormData | null>(null);

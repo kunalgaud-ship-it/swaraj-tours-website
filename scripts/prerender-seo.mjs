@@ -44,6 +44,9 @@ for (const page of PAGE_META) {
   html = replaceMeta(html, 'name', 'twitter:title', page.title);
   html = replaceMeta(html, 'name', 'twitter:description', page.description);
 
+  // The hero image preload only helps the homepage.
+  if (page.path !== '/') html = html.replace(/^\s*<link rel="preload" as="image"[^>]*>\r?\n/m, '');
+
   const canonical = siteUrl ? `${siteUrl}${page.path}` : '';
   const canonicalTag = canonical ? `<link rel="canonical" href="${escapeHtml(canonical)}" />` : '';
   const ogUrlTag = canonical ? `<meta property="og:url" content="${escapeHtml(canonical)}" />` : '';
