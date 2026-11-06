@@ -1,6 +1,6 @@
-# Swaraj Cab – Google Business Profile Kit
+# Shivraj Cab – Google Business Profile Kit
 
-This is everything needed to create and run the free Google page for the agency: the listing that appears on Google Maps and on the right side of Google Search when someone searches "Swaraj Cab" or "cab service Nashik". It shows the phone number, Call and Directions buttons, reviews, photos, hours and a link to the website.
+This is everything needed to create and run the free Google page for the agency: the listing that appears on Google Maps and on the right side of Google Search when someone searches "Shivraj Cab" or "cab service Nashik". It shows the phone number, Call and Directions buttons, reviews, photos, hours and a link to the website.
 
 Everything below is written so it can be copied straight into the Google Business Profile forms. Items marked **CONFIRM** must be checked with the owner before pasting.
 
@@ -8,15 +8,15 @@ Everything below is written so it can be copied straight into the Google Busines
 
 ## 1. Create the profile (one time, 20 minutes)
 
-1. Sign in to a Google account that the owner controls (not an employee's personal account). Suggested: create `swarajcabnashik@gmail.com` or use the agency's existing Gmail.
-2. Open <https://business.google.com/create> and enter the business name exactly: **Swaraj Cab**.
+1. Sign in to a Google account that the owner controls (not an employee's personal account). Use the agency's existing business Gmail account.
+2. Open <https://business.google.com/create> and enter the business name exactly: **Shivraj Cab**.
 3. Business type: tick **Customer visits** only if there is a real office with a signboard that customers can walk into. Always tick **Service area business** (cabs go to the customer). Both ticked = "hybrid", which is correct for a cab company with an office.
 4. Primary category: **Taxi service** (see Section 2 for the other categories).
 5. Address: full office address (**CONFIRM**). If there is no walk-in office, choose "I deliver goods and services to my customers" and hide the address. Google will then show only the service area.
 6. Service area: add the cities in Section 2 (maximum 20).
-7. Phone: **+91 98607 07287**. Website: the live site URL (for example `https://swarajcab.in`).
+7. Phone: **+91 98607 07287**. Website: add the live site URL after choosing a domain.
 8. Verification: Google will offer one of these. Do whichever is shown.
-   - **Video verification** (most common for taxi businesses in India). Record one continuous video on the phone showing: the office signboard or the cab with "Swaraj Cab" branding, the vehicle's yellow commercial number plate, the RC or permit document, and the owner unlocking the office or car. No faces or ID cards needed.
+   - **Video verification** (most common for taxi businesses in India). Record one continuous video on the phone showing: the office signboard or the cab with "Shivraj Cab" branding, the vehicle's yellow commercial number plate, the RC or permit document, and the owner unlocking the office or car. No faces or ID cards needed.
    - **Phone or SMS**: enter the code sent to the business number.
    - **Postcard**: arrives in 5 to 14 days; enter the 5-digit code.
    Verification review takes up to 5 business days. The profile goes live only after this.
@@ -28,12 +28,12 @@ Everything below is written so it can be copied straight into the Google Busines
 
 | Field | Value |
 |-------|-------|
-| Business name | Swaraj Cab (exactly this, no city or keywords added; Google suspends profiles with names like "Swaraj Cab – Best Cab Nashik") |
+| Business name | Shivraj Cab (exactly this, no city or keywords added; Google suspends profiles with names like "Shivraj Cab – Best Cab Nashik") |
 | Primary category | Taxi service |
 | Additional categories | Travel agency, Tour operator, Airport shuttle service, Car service, Transportation service |
 | Phone | +91 98607 07287 |
-| Website | https://swarajcab.in (**CONFIRM** domain) |
-| Appointment / booking link | https://swarajcab.in/ (the booking form is at the top of the homepage) |
+| Website | Add the live site URL after choosing a domain |
+| Appointment / booking link | Add the homepage URL after choosing a domain |
 | Hours | Open 24 hours, all 7 days |
 | Opening date | **CONFIRM** month and year the agency started |
 | Address | **CONFIRM** full street address with PIN code, Nashik, Maharashtra |
@@ -43,7 +43,7 @@ Everything below is written so it can be copied straight into the Google Busines
 ### Business description (732 characters, limit is 750)
 
 ```
-Swaraj Cab is a Nashik-based cab and tour operator offering one-way, round-trip, local hourly, airport transfer and sharing cab services across Maharashtra, 24x7. We run Mumbai-Nashik, Nashik-Pune, Nashik-Shirdi and Mumbai Airport routes daily, with hatchback, sedan, SUV (Innova Crysta) and Tempo Traveller options. Our pilgrimage packages cover 3 and 5 Jyotirlinga Darshan, Ashtavinayak Darshan, Trimbakeshwar and Bhimashankar with drivers who know every route and temple timing. Fares are confirmed on WhatsApp before the trip, with no hidden charges; tolls and parking are quoted separately. Pay by UPI, cash or card. Call or WhatsApp +91 98607 07287 any time for a quote, or book on our website in under a minute.
+Shivraj Cab is a Nashik-based cab and tour operator offering one-way, round-trip, local hourly, airport transfer and sharing cab services across Maharashtra, 24x7. We run Mumbai-Nashik, Nashik-Pune, Nashik-Shirdi and Mumbai Airport routes daily, with hatchback, sedan, SUV (Innova Crysta) and Tempo Traveller options. Our pilgrimage packages cover 3 and 5 Jyotirlinga Darshan, Ashtavinayak Darshan, Trimbakeshwar and Bhimashankar with drivers who know every route and temple timing. Fares are confirmed on WhatsApp before the trip, with no hidden charges; tolls and parking are quoted separately. Pay by UPI, cash or card. Call or WhatsApp +91 98607 07287 any time for a quote, or book on our website in under a minute.
 ```
 
 ### Attributes to tick
@@ -162,7 +162,7 @@ Also copy the Maps **Share** link of the listing (looks like `https://maps.app.g
 ### WhatsApp message to send after every completed trip
 
 ```
-Thank you for travelling with Swaraj Cab! If you were happy with the ride, a quick Google review helps us a lot:
+Thank you for travelling with Shivraj Cab! If you were happy with the ride, a quick Google review helps us a lot:
 <paste review link>
 Hope to drive you again soon.
 ```
@@ -173,7 +173,7 @@ Send it the same day while the trip is fresh. Aim for 5 to 10 reviews a month. D
 
 5 stars:
 ```
-Thank you, <name>! Glad the <Mumbai Airport pickup / Jyotirlinga trip> went smoothly. We look forward to driving you again. – Team Swaraj Cab
+Thank you, <name>! Glad the <Mumbai Airport pickup / Jyotirlinga trip> went smoothly. We look forward to driving you again. – Team Shivraj Cab
 ```
 
 3 or 4 stars:

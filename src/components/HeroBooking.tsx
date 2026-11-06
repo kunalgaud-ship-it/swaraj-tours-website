@@ -187,7 +187,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
 
   const generateWhatsAppMessage = () => {
     const details = [
-      `*🚖 Cab Booking Inquiry - Swaraj Cab (Your Road to Comfort)*`,
+      `*🚖 Cab Booking Inquiry - Shivraj Cab (Your Road to Comfort)*`,
       `Trip Type: ${tripType.toUpperCase()}`,
       `From: ${pickupCity}`,
       `To: ${tripType === 'local' ? `Local Package (${localPackage})` : dropCity}`,
@@ -243,7 +243,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
         // hand-off with a reference number so dispatch still receives every detail.
         onConfirmBooking({
           ...bookingData,
-          bookingRef: `SWARAJ-${Date.now().toString(36).toUpperCase()}`,
+          bookingRef: `SHIVRAJ-${Date.now().toString(36).toUpperCase()}`,
           emailSent: false,
         });
         return;

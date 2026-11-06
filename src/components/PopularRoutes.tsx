@@ -56,7 +56,7 @@ export const PopularRoutes: React.FC<PopularRoutesProps> = ({ onSelectRoute }) =
 
   const handleWhatsAppRoute = (route: PopularRoute) => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I want to book a cab for the route: *${route.from} to ${route.to}* (Starting Fare: \u20B9${route.startingPrice}, toll and parking extra). Please confirm available cabs & timing.`
+      `Hello Shivraj Cab, I want to book a cab for the route: *${route.from} to ${route.to}* (Starting Fare: \u20B9${route.startingPrice}, toll and parking extra). Please confirm available cabs & timing.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };

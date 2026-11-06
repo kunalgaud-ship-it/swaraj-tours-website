@@ -24,7 +24,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ bookingData, onClose
   if (!bookingData) return null;
 
   const vehicle = VEHICLES.find((v) => v.id === bookingData.selectedCarId) || VEHICLES[0];
-  const bookingRef = bookingData.bookingRef || 'SWARAJ';
+  const bookingRef = bookingData.bookingRef || 'SHIVRAJ';
   const needsWhatsApp = bookingData.emailSent === false;
 
   const handleWhatsAppConfirmation = () => {

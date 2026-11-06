@@ -2,7 +2,7 @@
  * Receives the Contact page "Send an Online Booking Inquiry" form and the
  * "Need Assistance?" modal, and emails the details to the business inbox.
  */
-const COMPANY_NAME = 'Swaraj Cab';
+const COMPANY_NAME = 'Shivraj Cab';
 const DEFAULT_NOTIFICATION_EMAIL = 'shivrajtravels1@gmail.com';
 const SOURCES = new Set(['contact', 'assistance']);
 const env = (globalThis as typeof globalThis & {

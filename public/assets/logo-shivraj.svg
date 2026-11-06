@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 184" role="img" aria-labelledby="title description">
+  <title id="title">Shivraj Cab</title>
+  <desc id="description">Shivraj Cab — Reliable, Safe, Travel. Serving since 2010.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14558a" />
+      <stop offset="1" stop-color="#071d3d" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd46b" />
+      <stop offset="1" stop-color="#ed8700" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 5)">
+    <path d="M15 108c32 22 80 30 129 12 22-8 37-24 51-42" fill="none" stroke="url(#blue)" stroke-width="10" stroke-linecap="round" />
+    <path d="M167 76l31 2-7-31" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M26 81l18-6 15-26c4-7 10-11 18-12l40-3c9-1 17 2 23 9l20 24 17 5c8 2 13 8 13 16v12H20V94c0-6 2-10 6-13z" fill="url(#blue)" stroke="#071d3d" stroke-width="3" />
+    <path d="M68 53c2-5 6-8 12-9l35-3c6 0 11 2 15 7l15 19H57z" fill="#cce4f2" stroke="#f7b53e" stroke-width="3" />
+    <path d="M98 43l-7 24m37-19 9 19" stroke="#678da9" stroke-width="3" />
+    <path d="M27 79h19m104 0h24" stroke="#f3a71c" stroke-width="5" stroke-linecap="round" />
+    <path d="M27 91h21m116 0h19" stroke="#fff2cc" stroke-width="5" stroke-linecap="round" />
+    <path d="M36 99v8m132-8v8" stroke="#071d3d" stroke-width="12" stroke-linecap="round" />
+    <circle cx="49" cy="105" r="12" fill="#102b4b" stroke="#d5e0e8" stroke-width="4" />
+    <circle cx="153" cy="105" r="12" fill="#102b4b" stroke="#d5e0e8" stroke-width="4" />
+    <text x="99" y="20" text-anchor="middle" fill="#8a704b" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">SERVICE SINCE 2010</text>
+  </g>
+  <text x="226" y="83" font-family="Arial, Helvetica, sans-serif" font-size="65" font-weight="900" letter-spacing="-2">
+    <tspan fill="#0b2345">SHIVRAJ</tspan><tspan dx="9" fill="url(#gold)">CAB</tspan>
+  </text>
+  <path d="M229 96h439" stroke="#0b2345" stroke-width="4" />
+  <path d="M229 96h160" stroke="url(#gold)" stroke-width="4" />
+  <text x="229" y="128" fill="#183b63" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="3">RELIABLE · SAFE · TRAVEL</text>
+</svg>

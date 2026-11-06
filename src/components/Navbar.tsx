@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
   };
 
   const handleWhatsAppChat = () => {
-    const text = encodeURIComponent("Hello Swaraj Cab, I want to inquire about booking a cab / tour package.");
+    const text = encodeURIComponent("Hello Shivraj Cab, I want to inquire about booking a cab / tour package.");
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
           onClick={(event) => handleNavLinkClick(event, 'hero')}
           className="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0"
         >
-          <span className="sr-only">Swaraj Cab, home</span>
+          <span className="sr-only">Shivraj Cab, home</span>
           <Logo className="group-hover:opacity-90 transition-opacity" />
         </a>
 

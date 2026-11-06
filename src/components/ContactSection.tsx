@@ -45,7 +45,7 @@ export const ContactSection: React.FC = () => {
 
   const handleWhatsAppDirect = () => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab,\nName: ${name || 'Traveler'}\nPhone: ${phone || 'N/A'}\nRoute/Requirement: ${routeInfo || 'General Inquiry'}\nMessage: ${message || 'Please provide quotation.'}`
+      `Hello Shivraj Cab,\nName: ${name || 'Traveler'}\nPhone: ${phone || 'N/A'}\nRoute/Requirement: ${routeInfo || 'General Inquiry'}\nMessage: ${message || 'Please provide quotation.'}`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -59,7 +59,7 @@ export const ContactSection: React.FC = () => {
             24x7 Customer Support & Office Hubs
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Contact Swaraj Cab
+            Contact Shivraj Cab
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600">
             One office, one dispatch desk, all in Nashik. Reach out anytime for urgent taxi bookings, outstation quotes, wedding convoys or corporate travel.

@@ -1,6 +1,6 @@
 import { supabaseReady, supabaseRequest } from '../server/supabaseAdmin';
 
-const COMPANY_NAME = 'Swaraj Cab';
+const COMPANY_NAME = 'Shivraj Cab';
 const DEFAULT_NOTIFICATION_EMAIL = 'shivrajtravels1@gmail.com';
 const env = (globalThis as typeof globalThis & {
   process?: { env: Record<string, string | undefined> };
@@ -66,7 +66,7 @@ export default async function handler(req: any, res: any) {
     return res.status(400).json({ error: 'Please enter valid booking details and a valid email address.' });
   }
 
-  const bookingRef = `SWARAJ-${Date.now().toString(36).toUpperCase()}`;
+  const bookingRef = `SHIVRAJ-${Date.now().toString(36).toUpperCase()}`;
   const safe = {
     ref: escapeHtml(bookingRef),
     name: escapeHtml(booking.customerName || 'Traveler'),

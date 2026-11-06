@@ -50,7 +50,7 @@ export const FareCalculator: React.FC = () => {
 
   const handleWhatsAppQuote = () => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I calculated an estimate on your website calculator:\n- Vehicle: *${vehicle.name}*\n- Trip: ${tripType.toUpperCase()} (${distanceKm} KM)\n- Duration: ${days} Day(s)\n- Estimated Fare: *₹${calculation.totalFare.toLocaleString()}*\n\nPlease confirm booking and driver details.`
+      `Hello Shivraj Cab, I calculated an estimate on your website calculator:\n- Vehicle: *${vehicle.name}*\n- Trip: ${tripType.toUpperCase()} (${distanceKm} KM)\n- Duration: ${days} Day(s)\n- Estimated Fare: *₹${calculation.totalFare.toLocaleString()}*\n\nPlease confirm booking and driver details.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };

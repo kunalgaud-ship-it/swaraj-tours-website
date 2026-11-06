@@ -359,7 +359,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col lg:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} <strong>Swaraj Cab</strong>. All rights reserved.
+            © {new Date().getFullYear()} <strong>Shivraj Cab</strong>. All rights reserved.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             {(

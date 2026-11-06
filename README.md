@@ -1,4 +1,4 @@
-# Swaraj Cab – website
+# Shivraj Cab – website
 
 Nashik cab, outstation taxi and tour package website. React 19 + Vite + Tailwind, with Vercel serverless functions in `api/` for booking and inquiry emails and the admin panel.
 
@@ -19,7 +19,7 @@ Copy `.env.example` to `.env` for local work. On Vercel, add the same keys under
 
 | Variable | Purpose |
 | --- | --- |
-| `SITE_URL` | Final public domain, e.g. `https://swarajcab.in`. Needed at build time for canonical URLs, `sitemap.xml`, absolute social-preview images and structured data. |
+| `SITE_URL` | Final public domain, e.g. `https://your-domain.com`. Needed at build time for canonical URLs, `sitemap.xml`, absolute social-preview images and structured data. |
 | `VITE_GOOGLE_MAPS_API_KEY` | Maps JavaScript + Places key. Restrict it to this domain (HTTP referrers) in Google Cloud Console. |
 | `RESEND_API_KEY`, `BOOKING_FROM_EMAIL`, `BOOKING_NOTIFICATION_EMAIL` | Booking and inquiry emails. `BOOKING_FROM_EMAIL` must use a domain verified in Resend. Until these are set, forms fall back to WhatsApp. |
 | `SUPABASE_*`, `VITE_SUPABASE_*` | Admin panel at `/admin` and the booking inbox. See `ADMIN_SETUP.md`. |

@@ -22,7 +22,7 @@ export const AirportTransfersPage: React.FC<AirportTransfersPageProps> = ({ onBo
             <Plane className="h-4 w-4" /> Nashik Airport Cab Service
           </div>
           <h1 className="max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">Nashik Airport Pickup &amp; Drop</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">Need a cab from Nashik Airport to the city, or a ride from Nashik to the airport? Arrange a private cab for your arrival or departure with Swaraj Cab.</p>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">Need a cab from Nashik Airport to the city, or a ride from Nashik to the airport? Arrange a private cab for your arrival or departure with Shivraj Cab.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button onClick={() => onBookTrip('Nashik Airport', 'Nashik')} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3 font-bold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:bg-amber-300">
               Book Airport Pickup <ArrowRight className="h-4 w-4" />

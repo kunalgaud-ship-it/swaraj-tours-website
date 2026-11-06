@@ -65,7 +65,7 @@ export const AssistanceFormModal: React.FC<AssistanceFormModalProps> = ({ isOpen
 
   const handleWhatsAppRedirect = () => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab Support,\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nMessage: ${message || 'Need assistance with cab booking / inquiry.'}`
+      `Hello Shivraj Cab Support,\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nMessage: ${message || 'Need assistance with cab booking / inquiry.'}`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };

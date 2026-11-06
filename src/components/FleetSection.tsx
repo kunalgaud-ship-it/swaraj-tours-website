@@ -33,7 +33,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onSelectCar }) => {
 
   const handleWhatsAppForVehicle = (vehicle: Vehicle) => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I am interested in hiring *${vehicle.name}* (Rate: ₹${vehicle.ratePerKm}/km, toll and parking extra). Please share availability and current tariff for my route.`
+      `Hello Shivraj Cab, I am interested in hiring *${vehicle.name}* (Rate: ₹${vehicle.ratePerKm}/km, toll and parking extra). Please share availability and current tariff for my route.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };

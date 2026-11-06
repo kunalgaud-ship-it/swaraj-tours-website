@@ -36,7 +36,7 @@ export const TourPackages: React.FC<TourPackagesProps> = ({ onSelectPackage }) =
 
   const handleWhatsAppPackage = (pkg: TourPackage) => {
     const text = encodeURIComponent(
-      `Hello Swaraj Cab, I am interested in your *${pkg.title}* (${pkg.duration}, Starting ₹${pkg.startingPrice}, toll and parking extra). Please send detailed pricing and vehicle options for our group.`
+      `Hello Shivraj Cab, I am interested in your *${pkg.title}* (${pkg.duration}, Starting ₹${pkg.startingPrice}, toll and parking extra). Please send detailed pricing and vehicle options for our group.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
