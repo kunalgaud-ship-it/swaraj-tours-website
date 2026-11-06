@@ -45,9 +45,9 @@
 
   <text x="218" y="48" fill="#ffd16a" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4">NASHIK  ·  SINCE 2010</text>
   <text x="214" y="106" fill="#f8fafc" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="59" font-weight="900" letter-spacing="-2">SHIVRAJ</text>
-  <path d="M514 58h138a7 7 0 0 1 7 7v44H514z" fill="url(#gold)" />
-  <path d="M521 65h124v37H521z" fill="none" stroke="#fff5d9" stroke-opacity=".7" stroke-width="1.5" />
-  <text x="583" y="97" text-anchor="middle" fill="#fff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="38" font-weight="900" letter-spacing="1">CAB</text>
+  <path d="M490 58h162a7 7 0 0 1 7 7v44H490z" fill="url(#gold)" />
+  <path d="M497 65h148v37H497z" fill="none" stroke="#fff5d9" stroke-opacity=".7" stroke-width="1.5" />
+  <text x="571" y="97" text-anchor="middle" fill="#fff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="38" font-weight="900" letter-spacing="1">CAB</text>
   <path d="M218 121h440" stroke="#e4edf5" stroke-width="2" />
   <path d="M218 121h125" stroke="url(#gold)" stroke-width="4" />
   <text x="219" y="150" fill="#e4edf5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="2.7">RELIABLE  ·  SAFE  ·  TRAVEL</text>
