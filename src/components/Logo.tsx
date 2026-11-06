@@ -17,7 +17,7 @@ const LOGO_WIDTH = {
 /** Shivraj Cab wordmark based on the supplied navy, amber and car logo. */
 export const Logo: React.FC<LogoProps> = ({ theme = 'dark', size = 'md', className = '' }) => (
   <img
-    src={`${import.meta.env.BASE_URL}assets/${theme === 'light' ? 'logo-shivraj-v11-light.svg' : 'logo-shivraj-v11.svg'}`}
+    src={`${import.meta.env.BASE_URL}assets/${theme === 'light' ? 'logo-shivraj-v13-light.svg' : 'logo-shivraj-v13.svg'}`}
     alt="Shivraj Cab — Reliable, Safe, Travel"
     width={720}
     height={184}
