@@ -164,7 +164,7 @@ export default function App() {
         return (
           <>
             <PageHero title="Our Services" subtitle="One-way, round trip, local, airport and corporate cabs with a well-maintained fleet and transparent per-km fares." onHome={goHome} />
-            <ServicesSection onBookService={handleBookService} />
+            <ServicesSection />
             <FleetSection onSelectCar={handleSelectCar} />
             <FleetComparison onSelectCar={handleSelectCar} />
             <FareCalculator />
@@ -233,10 +233,6 @@ export default function App() {
   };
 
   const handleSelectPackage = (packageName: string) => {
-    scrollToSection('booking');
-  };
-
-  const handleBookService = (serviceTitle: string) => {
     scrollToSection('booking');
   };
 

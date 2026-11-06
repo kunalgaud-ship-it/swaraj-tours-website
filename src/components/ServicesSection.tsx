@@ -10,17 +10,18 @@ import {
   Briefcase, 
   Check, 
   Sparkles,
-  PhoneCall,
   Car
 } from 'lucide-react';
-import { ServiceItem } from '../types/travel';
 import { SERVICES, COMPANY_INFO } from '../data/travelData';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
-interface ServicesSectionProps {
-  onBookService: (serviceTitle: string) => void;
-}
+export const ServicesSection: React.FC = () => {
+  const getServiceWhatsAppLink = (serviceTitle: string, subtitle: string) => {
+    const serviceDetails = subtitle ? ` (${subtitle})` : '';
+    const message = `Hello Shivraj Cab, I want to inquire about ${serviceTitle}${serviceDetails}. Please share the fare, availability, and booking details.`;
+    return `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
+  };
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookService }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Navigation':
@@ -103,14 +104,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookService 
 
               {/* Service Action */}
               <div className="pt-3 border-t border-slate-200/70">
-                <button
-                  type="button"
-                  onClick={() => onBookService(srv.title)}
+                <a
+                  href={getServiceWhatsAppLink(srv.title, srv.subtitle)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-2.5 px-3 rounded-xl bg-slate-900 group-hover:bg-amber-500 text-white group-hover:text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow cursor-pointer"
                 >
-                  <Car className="w-3.5 h-3.5" />
-                  <span>Inquire / Book Now</span>
-                </button>
+                  <WhatsAppIcon className="w-3.5 h-3.5" />
+                  <span>Inquire on WhatsApp</span>
+                </a>
               </div>
             </div>
           ))}
