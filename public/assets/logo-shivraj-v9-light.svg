@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 184" role="img" aria-labelledby="title description">
+  <title id="title">Shivraj Cab</title>
+  <desc id="description">Shivraj Cab — Reliable, Safe, Travel. Nashik, serving since 2010.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe19a" />
+      <stop offset=".48" stop-color="#f5ad25" />
+      <stop offset="1" stop-color="#c76608" />
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#184d80" />
+      <stop offset="1" stop-color="#071b35" />
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#b8c8d2" />
+    </linearGradient>
+    <filter id="depth" x="-.2" y="-.2" width="1.4" height="1.5" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" />
+      <feOffset dy="3" />
+      <feComponentTransfer><feFuncA type="linear" slope=".28" /></feComponentTransfer>
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+
+  <!-- S-shaped route badge: a road that becomes an arrow, carrying a cab -->
+  <g filter="url(#depth)">
+    <circle cx="94" cy="92" r="82" fill="url(#mark)" stroke="url(#gold)" stroke-width="5" />
+    <circle cx="94" cy="92" r="72" fill="none" stroke="#d9e8f4" stroke-opacity=".2" stroke-width="1.5" />
+    <path d="M44 135c0-16 21-22 49-27 32-6 50-11 49-27-1-17-20-21-43-25-15-3-20-9-15-19 4-9 18-16 34-21 11 0 22 4 33 9" fill="none" stroke="#05162b" stroke-width="19" stroke-linecap="round" />
+    <path d="M44 132c0-16 21-22 49-27 32-6 50-11 49-27-1-17-20-21-43-25-15-3-20-9-15-19 4-9 18-16 34-21 11 0 22 4 33 9" fill="none" stroke="url(#gold)" stroke-width="13" stroke-linecap="round" />
+    <path d="M94 126c30-6 49-12 48-28-1-17-20-21-43-25-15-3-20-9-15-19 4-9 18-16 34-21 9 0 18 3 27 7" fill="none" stroke="#fff7e5" stroke-opacity=".95" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="5 8" />
+    <path d="m142 35 29-14-14 31z" fill="url(#gold)" stroke="#fff1c8" stroke-width="2" stroke-linejoin="round" />
+
+    <!-- Side-profile premium cab, set over the lower bend of the route -->
+    <path d="M34 117h17l13-18c3-5 8-7 14-7h31c7 0 12 3 16 8l12 15 11 3c5 1 8 5 8 10v10H29v-10c0-6 2-10 5-11z" fill="url(#car)" stroke="#071b35" stroke-width="3" />
+    <path d="m67 99-10 16h27V96H76c-4 0-7 1-9 3zm25-3v19h39l-12-14c-2-4-6-5-10-5z" fill="#75a8ca" stroke="#f4b238" stroke-width="2" />
+    <path d="M39 119h16m91 0h18" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" />
+    <path d="M36 127h13" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+    <circle cx="56" cy="137" r="10" fill="#081b33" stroke="#e4edf2" stroke-width="3" />
+    <circle cx="149" cy="137" r="10" fill="#081b33" stroke="#e4edf2" stroke-width="3" />
+    <circle cx="56" cy="137" r="3" fill="#f5b53e" />
+    <circle cx="149" cy="137" r="3" fill="#f5b53e" />
+  </g>
+
+  <text x="218" y="48" fill="#ffd16a" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4">NASHIK  ·  SINCE 2010</text>
+  <text x="214" y="106" fill="#f8fafc" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="57" font-weight="900" letter-spacing="-2">SHIVRAJ</text>
+  <text x="471" y="106" fill="url(#gold)" stroke="#a65306" stroke-width=".8" paint-order="stroke" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="57" font-weight="900" letter-spacing="-1">CAB</text>
+  <path d="M218 121h440" stroke="#e4edf5" stroke-width="2" />
+  <path d="M218 121h125" stroke="url(#gold)" stroke-width="4" />
+  <text x="219" y="150" fill="#e4edf5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="2.7">RELIABLE  ·  SAFE  ·  TRAVEL</text>
+</svg>
