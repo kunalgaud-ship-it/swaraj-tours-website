@@ -2,32 +2,80 @@
   <title id="title">Shivraj Cab</title>
   <desc id="description">Shivraj Cab — Reliable, Safe, Travel. Serving since 2010.</desc>
   <defs>
-    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#14558a" />
-      <stop offset="1" stop-color="#071d3d" />
+    <linearGradient id="plate" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#f7f8f8" />
+      <stop offset=".23" stop-color="#c7c9c8" />
+      <stop offset=".5" stop-color="#f2f2ee" />
+      <stop offset=".77" stop-color="#aeb2b3" />
+      <stop offset="1" stop-color="#e4e4df" />
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffd46b" />
-      <stop offset="1" stop-color="#ed8700" />
+    <linearGradient id="plate-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset=".5" stop-color="#79818a" />
+      <stop offset="1" stop-color="#343d48" />
     </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#2672ac" />
+      <stop offset=".42" stop-color="#123e70" />
+      <stop offset="1" stop-color="#061b39" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#ffe29a" />
+      <stop offset=".42" stop-color="#f6b33d" />
+      <stop offset="1" stop-color="#b96108" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf8ff" />
+      <stop offset=".45" stop-color="#6b9cbd" />
+      <stop offset="1" stop-color="#183756" />
+    </linearGradient>
+    <radialGradient id="shine" cx="30%" cy="15%" r="90%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".7" />
+      <stop offset=".55" stop-color="#fff" stop-opacity=".08" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="lift" x="-.15" y="-.2" width="1.4" height="1.5" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.4" />
+      <feOffset dy="3" />
+      <feComponentTransfer><feFuncA type="linear" slope=".42" /></feComponentTransfer>
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <path id="arc" d="M 29 67 C 67 2 163 2 205 67" />
   </defs>
-  <g transform="translate(8 5)">
-    <path d="M15 108c32 22 80 30 129 12 22-8 37-24 51-42" fill="none" stroke="url(#blue)" stroke-width="10" stroke-linecap="round" />
-    <path d="M167 76l31 2-7-31" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M26 81l18-6 15-26c4-7 10-11 18-12l40-3c9-1 17 2 23 9l20 24 17 5c8 2 13 8 13 16v12H20V94c0-6 2-10 6-13z" fill="url(#blue)" stroke="#071d3d" stroke-width="3" />
-    <path d="M68 53c2-5 6-8 12-9l35-3c6 0 11 2 15 7l15 19H57z" fill="#cce4f2" stroke="#f7b53e" stroke-width="3" />
-    <path d="M98 43l-7 24m37-19 9 19" stroke="#678da9" stroke-width="3" />
-    <path d="M27 79h19m104 0h24" stroke="#f3a71c" stroke-width="5" stroke-linecap="round" />
-    <path d="M27 91h21m116 0h19" stroke="#fff2cc" stroke-width="5" stroke-linecap="round" />
-    <path d="M36 99v8m132-8v8" stroke="#071d3d" stroke-width="12" stroke-linecap="round" />
-    <circle cx="49" cy="105" r="12" fill="#102b4b" stroke="#d5e0e8" stroke-width="4" />
-    <circle cx="153" cy="105" r="12" fill="#102b4b" stroke="#d5e0e8" stroke-width="4" />
-    <text x="99" y="20" text-anchor="middle" fill="#8a704b" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">SERVICE SINCE 2010</text>
+
+  <!-- Satin-metal nameplate with a raised, polished rim -->
+  <rect x="4" y="5" width="712" height="174" rx="17" fill="#202833" opacity=".3" />
+  <rect x="3" y="2" width="712" height="174" rx="16" fill="url(#plate-edge)" />
+  <rect x="8" y="7" width="702" height="164" rx="12" fill="url(#plate)" stroke="#fff" stroke-opacity=".75" stroke-width="1.5" />
+  <path d="M15 18h688M15 160h688" stroke="#fff" stroke-opacity=".32" />
+  <rect x="8" y="7" width="702" height="164" rx="12" fill="url(#shine)" />
+
+  <!-- Cab, chrome highlights and the rising gold-and-blue road arrow -->
+  <g transform="translate(5 5)" filter="url(#lift)">
+    <path d="M22 123c45 23 107 18 153-13 15-10 25-23 35-42" fill="none" stroke="#09264b" stroke-width="10" stroke-linecap="round" />
+    <path d="M198 70l24-1-5-25" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M24 106c22-6 28-17 38-34l15-24c4-7 11-11 20-12l38-3c11-1 20 3 27 11l23 27 20 8c7 3 11 8 11 16v18H19v-4c0-3 2-6 5-7z" fill="url(#navy)" stroke="#102c4e" stroke-width="3" />
+    <path d="M79 51c2-5 7-9 13-9l35-3c7 0 12 2 17 8l18 21H68z" fill="url(#glass)" stroke="#eaa532" stroke-width="2.5" />
+    <path d="M116 42l-8 26m39-18 10 18" stroke="#d4e8f4" stroke-opacity=".75" stroke-width="2.4" />
+    <path d="M27 83l24-3m119 0 19 5" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" />
+    <path d="M24 103h20m145 0h20" stroke="#fff4d4" stroke-width="5" stroke-linecap="round" />
+    <path d="M33 112v8m157-8v8" stroke="#122941" stroke-width="13" stroke-linecap="round" />
+    <circle cx="48" cy="119" r="13" fill="#172c42" stroke="#d8e0e5" stroke-width="4" />
+    <circle cx="177" cy="119" r="13" fill="#172c42" stroke="#d8e0e5" stroke-width="4" />
+    <circle cx="48" cy="119" r="4" fill="#9caab5" />
+    <circle cx="177" cy="119" r="4" fill="#9caab5" />
+    <text font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#79664d"><textPath href="#arc" startOffset="50%" text-anchor="middle">SERVICE SINCE 2010</textPath></text>
   </g>
-  <text x="226" y="83" font-family="Arial, Helvetica, sans-serif" font-size="65" font-weight="900" letter-spacing="-2">
-    <tspan fill="#0b2345">SHIVRAJ</tspan><tspan dx="9" fill="url(#gold)">CAB</tspan>
-  </text>
-  <path d="M229 96h439" stroke="#0b2345" stroke-width="4" />
-  <path d="M229 96h160" stroke="url(#gold)" stroke-width="4" />
-  <text x="229" y="128" fill="#183b63" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="3">RELIABLE · SAFE · TRAVEL</text>
+
+  <!-- Beveled wordmark -->
+  <g filter="url(#lift)" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-2">
+    <text x="242" y="91" font-size="63" fill="#f7f8f6" stroke="#f7f8f6" stroke-width="4" paint-order="stroke">SHIVRAJ</text>
+    <text x="242" y="87" font-size="63" fill="url(#navy)" stroke="#0b2849" stroke-width="1.2" paint-order="stroke">SHIVRAJ</text>
+    <text x="501" y="91" font-size="63" fill="#fff1cc" stroke="#c17416" stroke-width="4" paint-order="stroke">CAB</text>
+    <text x="501" y="87" font-size="63" fill="url(#gold)" stroke="#ad5f12" stroke-width="1.2" paint-order="stroke">CAB</text>
+  </g>
+  <path d="M246 104h418" stroke="#4f5962" stroke-opacity=".7" stroke-width="3" />
+  <path d="M246 104h171" stroke="url(#gold)" stroke-width="4" />
+  <text x="247" y="139" fill="#193959" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" letter-spacing="3">RELIABLE · SAFE · TRAVEL</text>
+  <path d="M247 148h250" stroke="#fff" stroke-opacity=".55" stroke-width="1.3" />
 </svg>
