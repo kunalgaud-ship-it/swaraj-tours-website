@@ -25,7 +25,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onScrollToTop,
   }, []);
 
   const handleWhatsApp = () => {
-    const text = encodeURIComponent("Hello Swaraj Tours and Travels, I want to book a cab / tour package. Please share fares and availability.");
+    const text = encodeURIComponent("Hello Swaraj Cab, I want to book a cab / tour package. Please share fares and availability.");
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 

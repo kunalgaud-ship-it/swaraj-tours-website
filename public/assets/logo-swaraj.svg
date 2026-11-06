@@ -1,33 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160" role="img" aria-labelledby="logo-title logo-description">
-  <title id="logo-title">Swaraj Tours and Travels</title>
-  <desc id="logo-description">Swaraj Tours and Travels cab service in Nashik.</desc>
+  <title id="logo-title">Swaraj Cab</title>
+  <desc id="logo-description">Swaraj Cab, 24/7 cab service in Nashik.</desc>
   <defs>
     <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#183b5c"/>
-      <stop offset="1" stop-color="#0c2035"/>
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset="1" stop-color="#0b1a2e"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f6cf7b"/>
-      <stop offset="1" stop-color="#d99a35"/>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <!-- Journey mark: sunrise, winding road and a cab inside a clean badge. -->
-  <rect x="8" y="8" width="144" height="144" rx="34" fill="url(#badge)"/>
-  <rect x="14" y="14" width="132" height="132" rx="29" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
-  <circle cx="105" cy="45" r="23" fill="url(#gold)"/>
-  <path d="M27 91 52 69l18 15 19-25 34 32v16H27z" fill="#315571"/>
-  <path d="M27 120c18-15 34-9 47-22 10-10 13-22 13-34" fill="none" stroke="#f8f6ef" stroke-width="18" stroke-linecap="round"/>
-  <path d="M27 120c18-15 34-9 47-22 10-10 13-22 13-34" fill="none" stroke="#d99a35" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 8"/>
-  <path d="M36 92 45 76c2-4 5-6 10-6h27c5 0 9 2 11 7l9 16 6 3c3 1 4 4 4 7v6H30v-6c0-4 2-7 6-8z" fill="url(#gold)" stroke="#102b46" stroke-width="2"/>
-  <path d="m50 77-5 13h18V75h-8c-2 0-4 1-5 2zm20-2v15h27l-7-12c-1-2-3-3-6-3z" fill="#163652"/>
-  <circle cx="48" cy="108" r="7" fill="#10243a" stroke="#f4c66c" stroke-width="3"/>
-  <circle cx="96" cy="108" r="7" fill="#10243a" stroke="#f4c66c" stroke-width="3"/>
-  <rect x="64" y="61" width="20" height="7" rx="2.5" fill="#f7d48a"/>
+  <!-- Badge -->
+  <rect x="8" y="8" width="144" height="144" rx="36" fill="url(#badge)"/>
+  <rect x="8" y="8" width="144" height="72" rx="36" fill="url(#shine)"/>
+  <rect x="13" y="13" width="134" height="134" rx="32" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
+
+  <!-- Motion lines -->
+  <path d="M24 86h22M18 100h28M26 114h18" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" stroke-opacity=".9"/>
+
+  <!-- Roof sign -->
+  <rect x="76" y="44" width="34" height="13" rx="4" fill="url(#gold)"/>
+  <rect x="80" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
+  <rect x="87" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
+  <rect x="94" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
+  <rect x="101" y="48" width="4" height="5" rx="1" fill="#0b1a2e"/>
+
+  <!-- Cab body -->
+  <path d="M52 100v-8c0-4 2-7 6-8l10-19c2-4 6-6 10-6h30c4 0 8 2 10 6l9 17 8 2c4 1 6 4 6 8v8c0 3-2 5-5 5H57c-3 0-5-2-5-5z" fill="url(#gold)"/>
+  <!-- Windows -->
+  <path d="M69 83l7-15c1-2 3-3 5-3h11v18H69zm29 0V65h9c2 0 4 1 5 3l7 15H98z" fill="#0b1a2e"/>
+  <!-- Door line and handle -->
+  <path d="M97 84v20" stroke="#b45309" stroke-width="2" stroke-opacity=".6"/>
+  <rect x="100" y="90" width="7" height="3" rx="1.5" fill="#0b1a2e" fill-opacity=".55"/>
+  <!-- Headlight and taillight -->
+  <rect x="131" y="92" width="8" height="5" rx="2" fill="#fff7d6"/>
+  <rect x="52" y="92" width="6" height="5" rx="2" fill="#dc2626"/>
+  <!-- Wheels -->
+  <circle cx="74" cy="106" r="10" fill="#0b1a2e"/>
+  <circle cx="74" cy="106" r="4.5" fill="#fbbf24"/>
+  <circle cx="118" cy="106" r="10" fill="#0b1a2e"/>
+  <circle cx="118" cy="106" r="4.5" fill="#fbbf24"/>
+  <!-- Road -->
+  <path d="M36 128h92" stroke="#ffffff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 8"/>
 
   <!-- Wordmark -->
-  <text x="178" y="72" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="59" font-weight="900" letter-spacing="1.2" fill="#102b46">SWARAJ</text>
-  <text x="182" y="108" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="4.5" fill="#c48a22">TOURS &amp; TRAVELS</text>
-  <path d="M182 121h305" stroke="#e8b867" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="182" y="143" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2.1" fill="#53677b">NASHIK  &#8226;  MAHARASHTRA  &#8226;  24/7 CAB SERVICE</text>
+  <text x="176" y="80" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="64" font-weight="900" letter-spacing="1" fill="#0f2742">SWARAJ</text>
+  <text x="178" y="130" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="46" font-weight="900" letter-spacing="9" fill="#f59e0b">CAB</text>
+  <path d="M318 118v-22" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+  <text x="332" y="108" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="3" fill="#0f2742">NASHIK</text>
+  <text x="332" y="129" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#64748b">24/7 CAB SERVICE</text>
 </svg>

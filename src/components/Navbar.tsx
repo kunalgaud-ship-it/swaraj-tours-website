@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
   };
 
   const handleWhatsAppChat = () => {
-    const text = encodeURIComponent("Hello Swaraj Tours and Travels, I want to inquire about booking a cab / tour package.");
+    const text = encodeURIComponent("Hello Swaraj Cab, I want to inquire about booking a cab / tour package.");
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpe
         >
           <img width={224} height={64}
             src={withBase('/assets/logo-swaraj.svg')}
-            alt="Swaraj Tours and Travels"
+            alt="Swaraj Cab"
             className="h-12 sm:h-14 xl:h-12 2xl:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
           />
           {/* Tagline: shown on tablet (nav is hidden there) and very wide screens; hidden where the full nav needs the room */}

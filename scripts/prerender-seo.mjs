@@ -68,7 +68,7 @@ for (const page of PAGE_META) {
 
 // Static hosts (GitHub Pages) serve 404.html for unknown URLs; the app then renders its own 404 view.
 const notFoundHtml = sourceHtml
-  .replace(/<title>[^<]*<\/title>/, '<title>Page Not Found | Swaraj Tours</title>')
+  .replace(/<title>[^<]*<\/title>/, '<title>Page Not Found | Swaraj Cab</title>')
   .replace('</head>', `    <meta name="robots" content="noindex" />${newline}  </head>`);
 await writeFile(path.join(dist, '404.html'), notFoundHtml, 'utf8');
 

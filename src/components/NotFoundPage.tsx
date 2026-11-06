@@ -11,7 +11,7 @@ interface NotFoundPageProps {
 /** Shown for any URL that is not one of our pages, with noindex so Google does not treat it as a duplicate homepage. */
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onHome, onBook }) => {
   useEffect(() => {
-    document.title = 'Page Not Found | Swaraj Tours';
+    document.title = 'Page Not Found | Swaraj Cab';
     const robots = document.createElement('meta');
     robots.name = 'robots';
     robots.content = 'noindex, follow';

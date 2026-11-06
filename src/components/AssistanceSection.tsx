@@ -192,7 +192,7 @@ export const AssistanceSection: React.FC = () => {
                   <div className="shrink-0 flex items-center">
                     <img width={192} height={64}
                       src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/logo-swaraj.svg`}
-                      alt="Swaraj Tours and Travels"
+                      alt="Swaraj Cab"
                       className="h-12 sm:h-14 w-auto object-contain"
                       onError={(e) => {
                         const target = e.currentTarget;

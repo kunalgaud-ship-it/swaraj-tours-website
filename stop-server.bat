@@ -1,9 +1,9 @@
 @echo off
-title Swaraj Tours Website - Stop Server
+title Swaraj Cab Website - Stop Server
 cd /d "%~dp0"
 
 echo ==========================================
-echo   Swaraj Tours Website - Server STOP
+echo   Swaraj Cab Website - Server STOP
 echo ==========================================
 echo.
 

@@ -1,6 +1,6 @@
 import { supabaseReady, supabaseRequest } from '../server/supabaseAdmin';
 
-const COMPANY_NAME = 'Swaraj Tours and Travels';
+const COMPANY_NAME = 'Swaraj Cab';
 const DEFAULT_NOTIFICATION_EMAIL = 'shivrajtravels1@gmail.com';
 const env = (globalThis as typeof globalThis & {
   process?: { env: Record<string, string | undefined> };

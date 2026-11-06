@@ -1,4 +1,4 @@
--- Private booking inbox and editable public site settings for Swaraj Tours.
+-- Private booking inbox and editable public site settings for Swaraj Cab.
 -- Run this in the Supabase SQL Editor before deploying the admin panel.
 
 create table if not exists public.site_config (

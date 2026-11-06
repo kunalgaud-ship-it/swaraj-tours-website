@@ -168,7 +168,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
               <div className="bg-white p-3 rounded-xl shadow-md inline-flex items-center justify-center">
                 <img width={224} height={64}
                   src={withBase('/assets/logo-swaraj.svg')}
-                  alt="Swaraj Tours and Travels"
+                  alt="Swaraj Cab"
                   className="h-14 w-auto object-contain"
                 />
               </div>
@@ -363,7 +363,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col lg:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} <strong>Swaraj Tours and Travels</strong>. All rights reserved.
+            © {new Date().getFullYear()} <strong>Swaraj Cab</strong>. All rights reserved.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             {(

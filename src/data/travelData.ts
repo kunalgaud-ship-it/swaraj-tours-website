@@ -27,8 +27,8 @@ import nashikImage from '../assets/images/nashik-ramkund.webp';
 import tuljaImage from '../assets/images/tulja-bhavani.webp';
 
 export const COMPANY_INFO = {
-  name: "Swaraj Tours and Travels",
-  marathiName: "स्वराज टूर्स अँड ट्रॅव्हल्स",
+  name: "Swaraj Cab",
+  marathiName: "स्वराज कॅब",
   tagline: "Your Road to Comfort - Safe, Punctual & Affordable Travel across Maharashtra & Pan-India",
   primaryPhone: "+91 98607 07287",
   rawPhone: "+919860707287",
@@ -1458,7 +1458,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     category: "booking",
-    question: "How do I book a cab with Swaraj Tours and Travels?",
+    question: "How do I book a cab with Swaraj Cab?",
     answer: "Booking is effortless! You can enter your trip details on our website booking form, click 'Book via WhatsApp' to instantly chat with our dispatch team, or directly call our 24x7 Nashik helpline at +91 98607 07287. We confirm your cab with driver details and vehicle number via SMS and WhatsApp."
   },
   {
@@ -1479,7 +1479,7 @@ export const FAQS: FaqItem[] = [
   {
     category: "pricing",
     question: "How does the One-Way cab service save money?",
-    answer: "In traditional outstation rentals, travelers were forced to pay two-way round trip charges even if they only needed a drop. With Swaraj Tours and Travels One-Way cab service, you pay only for the single journey from your pickup city to your drop city, saving up to 40% to 50%!"
+    answer: "In traditional outstation rentals, travelers were forced to pay two-way round trip charges even if they only needed a drop. With Swaraj Cab One-Way cab service, you pay only for the single journey from your pickup city to your drop city, saving up to 40% to 50%!"
   },
   {
     category: "service",

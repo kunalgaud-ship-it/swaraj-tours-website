@@ -185,7 +185,7 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
 
   const generateWhatsAppMessage = () => {
     const details = [
-      `*🚖 Cab Booking Inquiry - Swaraj Tours and Travels (Your Road to Comfort)*`,
+      `*🚖 Cab Booking Inquiry - Swaraj Cab (Your Road to Comfort)*`,
       `Trip Type: ${tripType.toUpperCase()}`,
       `From: ${pickupCity}`,
       `To: ${tripType === 'local' ? `Local Package (${localPackage})` : dropCity}`,

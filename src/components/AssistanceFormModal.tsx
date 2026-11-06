@@ -64,7 +64,7 @@ export const AssistanceFormModal: React.FC<AssistanceFormModalProps> = ({ isOpen
 
   const handleWhatsAppRedirect = () => {
     const text = encodeURIComponent(
-      `Hello Swaraj Tours and Travels Support,\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nMessage: ${message || 'Need assistance with cab booking / inquiry.'}`
+      `Hello Swaraj Cab Support,\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nMessage: ${message || 'Need assistance with cab booking / inquiry.'}`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -250,7 +250,7 @@ export const AssistanceFormModal: React.FC<AssistanceFormModalProps> = ({ isOpen
                 <div className="shrink-0 flex items-center">
                   <img width={192} height={64}
                     src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/logo-swaraj.svg`}
-                    alt="Swaraj Tours and Travels"
+                    alt="Swaraj Cab"
                     className="h-12 sm:h-14 w-auto object-contain"
                     onError={(e) => {
                       const target = e.currentTarget;
