@@ -14,6 +14,13 @@ export const PAGE_META = [
     sections: ['services', 'fleet', 'compare', 'calculator'],
   },
   {
+    path: '/nashik-airport-cabs',
+    label: 'Nashik Airport Cabs',
+    title: 'Nashik Airport Pickup & Drop Cab | Swaraj Cab',
+    description: 'Book a cab for pickup from Nashik Airport to the city or a drop from Nashik to the airport. Reserve a comfortable private taxi with Swaraj Cab.',
+    sections: ['airport-transfers'],
+  },
+  {
     path: '/packages',
     label: 'Tour Packages',
     title: 'Nashik Tour Packages: Shirdi & Jyotirlinga | Swaraj Cab',

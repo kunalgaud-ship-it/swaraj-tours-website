@@ -5,7 +5,7 @@
  */
 import { PAGE_META } from './pageMeta.js';
 
-export type PagePath = '/' | '/services' | '/packages' | '/about' | '/contact' | '/policies';
+export type PagePath = '/' | '/services' | '/nashik-airport-cabs' | '/packages' | '/about' | '/contact' | '/policies';
 
 export interface PageMeta {
   path: PagePath;

@@ -14,12 +14,13 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onNavigate, onOpenBooking, onOpenAssistance }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // 5 pages on desktop; the mobile drawer also lists the sections inside each page.
+  // Primary pages appear on desktop; the mobile drawer also lists secondary pages and sections.
   // Each target is a section id; the router (src/pages.ts) opens the right page and scrolls to it.
   const navLinks: { label: string; target: string; mobileOnly?: boolean }[] = [
     { label: 'Home', target: 'hero' },
     { label: 'Book Taxi', target: 'booking' },
     { label: 'Services', target: 'services' },
+    { label: 'Nashik Airport Cabs', target: 'airport-transfers', mobileOnly: true },
     { label: 'Our Fleet', target: 'fleet', mobileOnly: true },
     { label: 'Fare Calculator', target: 'calculator', mobileOnly: true },
     { label: 'Tour Packages', target: 'packages' },

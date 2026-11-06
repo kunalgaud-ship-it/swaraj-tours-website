@@ -274,6 +274,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectRoute, onOpe
             </h3>
             <ul className="space-y-2">
               {[
+                { label: 'Nashik Airport Pickup & Drop', target: 'airport-transfers' },
                 { label: 'About Us', target: 'about' },
                 { label: 'How It Works', target: 'how-it-works' },
                 { label: 'Offers & Promo Codes', target: 'offers' },

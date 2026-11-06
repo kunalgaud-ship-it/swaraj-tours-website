@@ -36,6 +36,7 @@ const ReviewsSection = lazyWithReload(() => import('./components/ReviewsSection'
 const FaqSection = lazyWithReload(() => import('./components/FaqSection').then((module) => ({ default: module.FaqSection })));
 const ContactSection = lazyWithReload(() => import('./components/ContactSection').then((module) => ({ default: module.ContactSection })));
 const AssistanceSection = lazyWithReload(() => import('./components/AssistanceSection').then((module) => ({ default: module.AssistanceSection })));
+const AirportTransfersPage = lazyWithReload(() => import('./components/AirportTransfersPage').then((module) => ({ default: module.AirportTransfersPage })));
 const PoliciesPage = lazyWithReload(() => import('./components/PoliciesPage').then((module) => ({ default: module.PoliciesPage })));
 
 export default function App() {
@@ -154,6 +155,11 @@ export default function App() {
       return <NotFoundPage onHome={goHome} onBook={() => scrollToSection('booking')} />;
     }
     switch (page.path) {
+      case '/nashik-airport-cabs':
+        return <AirportTransfersPage onBookTrip={(from, to) => {
+          setPrefillRoute({ from, to });
+          scrollToSection('booking');
+        }} />;
       case '/services':
         return (
           <>

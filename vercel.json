@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/services", "destination": "/services/index.html" },
+    { "source": "/nashik-airport-cabs", "destination": "/nashik-airport-cabs/index.html" },
     { "source": "/packages", "destination": "/packages/index.html" },
     { "source": "/about", "destination": "/about/index.html" },
     { "source": "/contact", "destination": "/contact/index.html" },
