@@ -2,32 +2,56 @@
   <title id="logo-title">Swaraj Cab</title>
   <desc id="logo-description">Swaraj Cab, 24/7 cab service in Nashik.</desc>
   <defs>
-    <linearGradient id="coin" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1e3a5f"/>
-      <stop offset="1" stop-color="#0b1a2e"/>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fde68a"/><stop offset=".5" stop-color="#f59e0b"/><stop offset="1" stop-color="#b45309"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fbbf24"/>
-      <stop offset="1" stop-color="#f59e0b"/>
+    <radialGradient id="coin" cx="50%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#2b4f7e"/><stop offset="1" stop-color="#0b1a2e"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/><stop offset=".45" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#64748b" stop-opacity="0"/><stop offset="1" stop-color="#94a3b8" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cabText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbbf24"/><stop offset=".5" stop-color="#f59e0b"/><stop offset="1" stop-color="#ea580c"/>
     </linearGradient>
     <pattern id="checker" width="16" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#0f172a"/>
-      <rect x="8" width="8" height="8" fill="#f59e0b"/>
+      <rect width="8" height="8" fill="#0f172a"/><rect x="8" width="8" height="8" fill="#f59e0b"/>
     </pattern>
   </defs>
 
-  <!-- Mark: navy coin, amber S road with route markers -->
   <g transform="translate(10 10) scale(1.2)">
-    <circle cx="50" cy="50" r="48" fill="url(#coin)"/>
-    <circle cx="50" cy="50" r="42.5" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
-    <path d="M66 27H42a11 11 0 0 0 0 22h16a11 11 0 0 1 0 22H34" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
-    <path d="M66 27H42a11 11 0 0 0 0 22h16a11 11 0 0 1 0 22H34" fill="none" stroke="#0b1a2e" stroke-opacity=".75" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="4.5 5"/>
-    <circle cx="66" cy="27" r="6" fill="#ffffff"/><circle cx="66" cy="27" r="2.4" fill="#0b1a2e"/>
-    <circle cx="34" cy="71" r="6" fill="#ffffff"/><circle cx="34" cy="71" r="2.4" fill="#0b1a2e"/>
+    <circle cx="50" cy="50" r="49" fill="url(#ring)"/>
+    <circle cx="50" cy="50" r="43.5" fill="url(#coin)"/>
+    <path d="M18 88 L43 58 H57 L82 88 Z" fill="url(#road)"/>
+    <path d="M50 64 V86" stroke="#ffffff" stroke-opacity=".7" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M12 52 q10-9 22-6" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M9 62 q9-6 18-5" fill="none" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".6"/>
+    <path d="M88 52 q-10-9-22-6" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M91 62 q-9-6-18-5" fill="none" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".6"/>
+    <rect x="40" y="25" width="20" height="7.5" rx="2.5" fill="url(#body)"/>
+    <rect x="43" y="27.5" width="3" height="2.5" rx=".8" fill="#0b1a2e"/><rect x="48.5" y="27.5" width="3" height="2.5" rx=".8" fill="#0b1a2e"/><rect x="54" y="27.5" width="3" height="2.5" rx=".8" fill="#0b1a2e"/>
+    <rect x="48" y="32.5" width="4" height="3" fill="#b45309"/>
+    <path d="M33 52 L38.5 38.5 Q39.5 35.5 42.5 35.5 H57.5 Q60.5 35.5 61.5 38.5 L67 52 Z" fill="url(#body)"/>
+    <path d="M37 50 L41 40.5 Q41.5 39 43 39 H57 Q58.5 39 59 40.5 L63 50 Z" fill="#1e3a5f"/>
+    <path d="M43.5 40.5 L40.5 48 H45.5 L48.5 40.5 Z" fill="#ffffff" fill-opacity=".35"/>
+    <rect x="27" y="45" width="6" height="4" rx="1.5" fill="#f59e0b"/><rect x="67" y="45" width="6" height="4" rx="1.5" fill="#f59e0b"/>
+    <rect x="28" y="51" width="44" height="20" rx="5" fill="url(#body)"/>
+    <rect x="31" y="66" width="38" height="5" rx="2.5" fill="#d97706"/>
+    <rect x="43" y="56" width="14" height="6" rx="1.5" fill="#0b1a2e"/>
+    <path d="M45 58h10M45 60h10" stroke="#f59e0b" stroke-width=".8" stroke-opacity=".7"/>
+    <rect x="44" y="63.5" width="12" height="2.5" rx=".8" fill="#fffbeb"/>
+    <circle cx="36" cy="59" r="7" fill="url(#glow)"/><circle cx="64" cy="59" r="7" fill="url(#glow)"/>
+    <ellipse cx="36" cy="59" rx="4.2" ry="3.2" fill="#ffffff"/><ellipse cx="64" cy="59" rx="4.2" ry="3.2" fill="#ffffff"/>
+    <rect x="30" y="70" width="9" height="6" rx="2" fill="#0b1a2e"/><rect x="61" y="70" width="9" height="6" rx="2" fill="#0b1a2e"/>
   </g>
 
-  <!-- Wordmark -->
-  <text x="150" y="76" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="48" font-weight="900" letter-spacing="-0.5" fill="#0f172a">SWARAJ<tspan dx="14" fill="#f59e0b">CAB</tspan></text>
+  <text x="150" y="76" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="48" font-weight="900" letter-spacing="-0.5" fill="#0f172a">SWARAJ<tspan dx="14" fill="url(#cabText)">CAB</tspan></text>
   <rect x="152" y="88" width="350" height="6" rx="1.5" fill="url(#checker)"/>
   <text x="153" y="118" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#64748b">NASHIK  ·  24/7 CAB SERVICE</text>
 </svg>
