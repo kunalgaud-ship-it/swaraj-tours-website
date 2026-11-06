@@ -12,8 +12,9 @@ import {
   Navigation,
   Compass
 } from 'lucide-react';
-import { Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
+import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { COMPANY_INFO } from '../data/travelData';
+import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_OPTIONS } from '../maps';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { sendInquiry } from '../inquiry';
 
@@ -133,20 +134,25 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Google Map of the Nashik office */}
-              <div className="h-52 w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner relative">
-                <Map
-                  mapId="DEMO_MAP_ID"
-                  center={OFFICE}
-                  zoom={12}
-                  gestureHandling="cooperative"
-                  disableDefaultUI={false}
-                  style={{ width: '100%', height: '100%' }}
-                  internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
-                >
-                  <AdvancedMarker position={OFFICE} title={`${COMPANY_INFO.name} - Nashik Office`}>
-                    <Pin background="#f59e0b" borderColor="#b45309" glyphColor="#ffffff" scale={1.1} />
-                  </AdvancedMarker>
-                </Map>
+              <div className="h-52 w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner relative bg-slate-100">
+                {GOOGLE_MAPS_API_KEY ? (
+                  <APIProvider apiKey={GOOGLE_MAPS_API_KEY} libraries={GOOGLE_MAPS_OPTIONS.libraries} region={GOOGLE_MAPS_OPTIONS.region} language={GOOGLE_MAPS_OPTIONS.language}>
+                    <Map
+                      mapId="DEMO_MAP_ID"
+                      center={OFFICE}
+                      zoom={12}
+                      gestureHandling="cooperative"
+                      disableDefaultUI={false}
+                      style={{ width: '100%', height: '100%' }}
+                    >
+                      <AdvancedMarker position={OFFICE} title={`${COMPANY_INFO.name} - Nashik Office`}>
+                        <Pin background="#f59e0b" borderColor="#b45309" glyphColor="#ffffff" scale={1.1} />
+                      </AdvancedMarker>
+                    </Map>
+                  </APIProvider>
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center text-xs text-slate-500">Map unavailable</div>
+                )}
               </div>
 
               {/* Office Address + service area */}

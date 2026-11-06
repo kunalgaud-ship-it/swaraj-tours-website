@@ -20,6 +20,8 @@ import { TripType, BookingFormData } from '../types/travel';
 import { VEHICLES, POPULAR_CITIES, COMPANY_INFO } from '../data/travelData';
 import { PlaceAutocompleteInput, PlaceSelection } from './PlaceAutocompleteInput';
 const DestinationMapModal = React.lazy(() => import('./DestinationMapModal').then((module) => ({ default: module.DestinationMapModal })));
+const APIProvider = React.lazy(() => import('@vis.gl/react-google-maps').then((module) => ({ default: module.APIProvider })));
+import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_OPTIONS } from '../maps';
 import { WhatsAppIcon } from './WhatsAppIcon';
 const heroBackground = `${import.meta.env.BASE_URL}images/hero-cab.webp`;
 
@@ -766,18 +768,23 @@ export const HeroBooking: React.FC<HeroBookingProps> = ({ onConfirmBooking, pref
       </div>
 
       {/* Interactive Google Map Route Modal */}
-      <React.Suspense fallback={null}>
-        <DestinationMapModal
-          isOpen={isMapModalOpen}
-          onClose={() => setIsMapModalOpen(false)}
-          initialPickup={pickupCity}
-          initialDrop={dropCity}
-          onApplyLocations={(p, d) => {
-            setPickupCity(p);
-            setDropCity(d);
-          }}
-        />
-      </React.Suspense>
+      {/* Map modal (and the Google Maps SDK behind it) is only mounted once the traveller opens it. */}
+      {isMapModalOpen && (
+        <React.Suspense fallback={null}>
+          <APIProvider apiKey={GOOGLE_MAPS_API_KEY} libraries={GOOGLE_MAPS_OPTIONS.libraries} region={GOOGLE_MAPS_OPTIONS.region} language={GOOGLE_MAPS_OPTIONS.language}>
+            <DestinationMapModal
+              isOpen={isMapModalOpen}
+              onClose={() => setIsMapModalOpen(false)}
+              initialPickup={pickupCity}
+              initialDrop={dropCity}
+              onApplyLocations={(p, d) => {
+                setPickupCity(p);
+                setDropCity(d);
+              }}
+            />
+          </APIProvider>
+        </React.Suspense>
+      )}
     </section>
   );
 };

@@ -1,7 +1,7 @@
 /// <reference types="@types/google.maps" />
 import React, { useState, useEffect, useRef } from 'react';
-import { useMapsLibrary } from '@vis.gl/react-google-maps';
 import { MapPin, Loader2, X } from 'lucide-react';
+import { loadPlacesLibrary } from '../maps';
 
 export interface PlaceSelection {
   name: string;
@@ -31,7 +31,8 @@ export const PlaceAutocompleteInput: React.FC<PlaceAutocompleteInputProps> = ({
   iconColor = "text-emerald-600",
   required = false,
 }) => {
-  const placesLib = useMapsLibrary('places');
+  // Places loads only after the traveller focuses a location field, so the page itself stays light.
+  const [placesLib, setPlacesLib] = useState<google.maps.PlacesLibrary | null>(null);
   const sessionTokenRef = useRef<google.maps.places.AutocompleteSessionToken | null>(null);
 
   const [suggestions, setSuggestions] = useState<google.maps.places.AutocompleteSuggestion[]>([]);
@@ -51,6 +52,16 @@ export const PlaceAutocompleteInput: React.FC<PlaceAutocompleteInputProps> = ({
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Load the Places library on first focus
+  useEffect(() => {
+    if (!isFocused || placesLib) return;
+    let cancelled = false;
+    loadPlacesLibrary()
+      .then((lib) => { if (!cancelled) setPlacesLib(lib); })
+      .catch((err: unknown) => console.warn('Place autocomplete unavailable:', err));
+    return () => { cancelled = true; };
+  }, [isFocused, placesLib]);
 
   // Fetch suggestions when value changes
   useEffect(() => {

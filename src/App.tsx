@@ -4,7 +4,6 @@
  */
 
 import React, { lazy, Suspense, useState, useEffect } from 'react';
-import { APIProvider } from '@vis.gl/react-google-maps';
 import { Navbar } from './components/Navbar';
 import { HeroBooking } from './components/HeroBooking';
 import { WhyChooseUs } from './components/WhyChooseUs';
@@ -37,9 +36,6 @@ const FaqSection = lazy(() => import('./components/FaqSection').then((module) =>
 const ContactSection = lazy(() => import('./components/ContactSection').then((module) => ({ default: module.ContactSection })));
 const AssistanceSection = lazy(() => import('./components/AssistanceSection').then((module) => ({ default: module.AssistanceSection })));
 const PoliciesPage = lazy(() => import('./components/PoliciesPage').then((module) => ({ default: module.PoliciesPage })));
-
-// Set VITE_GOOGLE_MAPS_API_KEY in the host's environment (restricted to this site's domain in Google Cloud Console).
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || '';
 
 export default function App() {
   const [bookingModalData, setBookingModalData] = useState<BookingFormData | null>(null);
@@ -241,13 +237,9 @@ export default function App() {
     setBookingModalData(data);
   };
 
+  // Google Maps is not loaded here: see src/maps.ts. Location fields and maps load it on demand.
   return (
-    <APIProvider
-      apiKey={GOOGLE_MAPS_API_KEY}
-      libraries={['places']}
-      region="IN"
-      language="en"
-    >
+    <>
       <div className="min-h-screen bg-white text-slate-900 selection:bg-amber-500 selection:text-slate-950">
         {/* Two-Tier In-App Quota Defense Banner */}
         {quotaExceeded && (
@@ -314,6 +306,6 @@ export default function App() {
           onClose={() => setIsAssistanceOpen(false)}
         />
       </div>
-    </APIProvider>
+    </>
   );
 }
