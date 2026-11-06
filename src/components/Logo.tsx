@@ -9,17 +9,19 @@ interface LogoProps {
 }
 
 const LOGO_WIDTH = {
-  sm: 'w-40',
-  md: 'w-52',
-  lg: 'w-60',
+  sm: 'w-44',
+  md: 'w-52 sm:w-60',
+  lg: 'w-60 sm:w-64',
 };
 
 /** Shivraj Cab wordmark based on the supplied navy, amber and car logo. */
 export const Logo: React.FC<LogoProps> = ({ theme = 'dark', size = 'md', className = '' }) => (
   <img
-    src={`${import.meta.env.BASE_URL}assets/logo-shivraj.svg`}
+    src={`${import.meta.env.BASE_URL}assets/logo-shivraj-v2.svg`}
     alt="Shivraj Cab — Reliable, Safe, Travel"
-    className={`block h-auto ${LOGO_WIDTH[size]} max-w-full ${theme === 'light' ? 'rounded-xl shadow-md' : ''} ${className}`}
+    width={720}
+    height={184}
+    className={`block h-auto aspect-[90/23] object-contain ${LOGO_WIDTH[size]} max-w-full ${theme === 'light' ? 'rounded-xl shadow-md' : ''} ${className}`}
     decoding="async"
   />
 );

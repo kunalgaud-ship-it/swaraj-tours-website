@@ -71,8 +71,8 @@
   <g filter="url(#lift)" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-2">
     <text x="242" y="91" font-size="63" fill="#f7f8f6" stroke="#f7f8f6" stroke-width="4" paint-order="stroke">SHIVRAJ</text>
     <text x="242" y="87" font-size="63" fill="url(#navy)" stroke="#0b2849" stroke-width="1.2" paint-order="stroke">SHIVRAJ</text>
-    <text x="501" y="91" font-size="63" fill="#fff1cc" stroke="#c17416" stroke-width="4" paint-order="stroke">CAB</text>
-    <text x="501" y="87" font-size="63" fill="url(#gold)" stroke="#ad5f12" stroke-width="1.2" paint-order="stroke">CAB</text>
+    <text x="522" y="91" font-size="60" fill="#fff1cc" stroke="#c17416" stroke-width="4" paint-order="stroke">CAB</text>
+    <text x="522" y="87" font-size="60" fill="url(#gold)" stroke="#ad5f12" stroke-width="1.2" paint-order="stroke">CAB</text>
   </g>
   <path d="M246 104h418" stroke="#4f5962" stroke-opacity=".7" stroke-width="3" />
   <path d="M246 104h171" stroke="url(#gold)" stroke-width="4" />
